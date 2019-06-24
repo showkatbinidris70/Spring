@@ -1,4 +1,4 @@
-package com.example.basicbootweb;
+package com.coderbd.basicbootweb;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
