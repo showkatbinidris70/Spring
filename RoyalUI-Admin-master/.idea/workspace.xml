@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="47dcc024-8e05-4ead-bcc3-030edce3192d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../classTest/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/java/com/example/demo/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/css/maps/style.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Black.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Black.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Black.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Black.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Bold.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Bold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Bold.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Bold.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Light.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Light.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Light.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Light.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Medium.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Medium.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Medium.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Medium.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Regular.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Regular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Regular.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/fonts/Roboto/Roboto-Regular.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/auth/lockscreen-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/auth/login-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/auth/register-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/dashboard/shape-1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/dashboard/shape-2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/dashboard/shape-3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/dashboard/shape-4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face21.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face22.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face23.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face24.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face25.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face26.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face27.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face28.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/faces/face9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/logo-mini.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/images/logo.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/js/chart.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/js/dashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/js/documentation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/js/file-upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/js/hoverable-collapse.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/js/off-canvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/js/tabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/js/template.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/js/todolist.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/js/tooltips.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/vendors/base/vendor.bundle.base.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/vendors/base/vendor.bundle.base.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/vendors/chart.js/Chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/vendors/ti-icons/css/themify-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/vendors/ti-icons/fonts/themify.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/vendors/ti-icons/fonts/themify.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/vendors/ti-icons/fonts/themify.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/static/vendors/ti-icons/fonts/themify.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/templates/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/templates/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/templates/fragments/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/templates/fragments/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/templates/fragments/leftnav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demo/src/main/resources/templates/layout.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-942432490">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1340" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="RoyalUI-Admin-master" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RoyalUI-Admin-master" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="47dcc024-8e05-4ead-bcc3-030edce3192d" name="Default Changelist" comment="" />
+      <created>1561456277906</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1561456277906</updated>
+      <workItem from="1561456282015" duration="666000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="666000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1376" height="744" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+</project>

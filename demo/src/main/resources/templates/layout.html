@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org"
+       xmlns:layout="http://www.ultraq.net.nz/themeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title layout:title-pattern="$CONTENT-TITLE-$LAYOUT_TITLE">Test Inc</title>
+</head>
+<body>
+<div class="container-scroller">
+    <!--partials/navbar.html-->
+    <div th:replace="~{fragments/header.html :: topvav}"></div>
+    <!--partial-->
+
+    <div class="container-fluid page-body-wrapper">
+    <div th:replace="~{fragments/leftnav.html :: leftnav}"></div>
+    </div>
+    <!--partial-nav-->
+    <div class="main-panel" layout:fragment="custom-content">
+        <h1>COntent will go here</h1>
+        <div th:replace="~{fragments/footer.html :: copyright}"></div>
+    </div>
+</div>
+</body>
+</html>
