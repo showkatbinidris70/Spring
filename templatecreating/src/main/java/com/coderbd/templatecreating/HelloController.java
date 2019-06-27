@@ -13,8 +13,19 @@ public class HelloController {
     public String DisplayHeader(){
         return "header";
     }
+
     @GetMapping(value = "/footer")
     public String DisplayFooter(){
         return "footer";
+    }
+
+    @GetMapping(value = "/about")
+    public String DisplayAbout(){
+        return "about";
+    }
+
+    @GetMapping(value = "/temp")
+    public String DisplayTemp(){
+        return "temp";
     }
 }

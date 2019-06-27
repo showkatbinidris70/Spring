@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+<head>
+    <!-- Theme Made By www.w3schools.com - No Copyright -->
+    <title>About Page</title>
+
+</head>
+<body>
+
+<div layout:fragment="cus-content">
+    <div class="container">
+        <h1>Add user</h1>
+        <h2 th:text="${successMsg}"></h2>
+        <form th:object="${user}" th:>
+        <div class="row">
+            <div class="col.md-3">
+            <label for="name">Name</label>
+            </div>
+            <div class="col.md-9">
+                <input class="form-control" type="text" th:field="*{name}" id="name"/>
+            </div>
+        </div>
+            <div class="row">
+                <div class="col.md-3">
+                    <label for="userName">User Name</label>
+                </div>
+                <div class="col.md-9">
+                    <input class="form-control" type="text" th:field="*{userName}" id="userName"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col.md-3">
+                    <label for="password">Password</label>
+                </div>
+                <div class="col.md-9">
+                    <input class="form-control" type="password" th:field="*{password}" id="password"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col.md-3">
+                    <label for="Gender">Gender</label>
+                </div>
+                <div class="col.md-9">
+                   Male <input class="radio radio-menu-item" type="radio" th:field="*{gender}" th:value="Male"/>
+                    Female <input class="radio radio-menu-item" type="radio" th:field="*{gender}" th:value="Female"/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col.md-3">
+                    <label>Country</label>
+                </div>
+                <div class="col.md-9">
+                   <select th:field="*{country}">
+                       <option value="">Select A Count</option>
+                       <option value="">Select A Count</option>
+                       <option value="">Select A Count</option>
+                       <option value="">Select A Count</option>
+                   </select>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

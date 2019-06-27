@@ -7,10 +7,12 @@ xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout ">
 </head>
 <body>
 
-<div th:fragment="~{/fragments/header.html :: topnav}"></div>
+<div th:replace="~{/fragments/footer.html :: leftnav}"></div>
 
+<div th:replace="~{/fragments/header.html :: topnav}"></div>
 
+<div layout:fragment="cus-content"> </div>
 
-<div th:fragment="~{/fragments/footer.html :: footer}"></div>
+<div th:replace="~{/fragments/footer.html :: footer}"></div>
 
 </body>
