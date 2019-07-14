@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,10 +8,10 @@
 <h1>Add Student</h1>
 <span style="color:red;" th:text="${errMsg}"></span>
 <span style="color:green;" th:text="${successMsg}"></span>
-<form th:object="${student}" th:action="@{/student}", th:method="POST">
-    <input type="text" th:field="*{name}" >
-    <input type="email" th:field="*{email}" >
-    <select th:field="*{department}" >
+<form th:object="${student}" th:action="@{/student}" , th:method="POST">
+    <input type="text" th:field="*{name}">
+    <input type="email" th:field="*{email}">
+    <select th:field="*{department}">
         <option th:each="dep : ${deplist}" th:value="${dep.id}"><span th:text="${dep.name}"></span></option>
     </select>
     <button type="submit">Save</button>

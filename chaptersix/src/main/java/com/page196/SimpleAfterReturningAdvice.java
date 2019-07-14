@@ -10,7 +10,7 @@ public class SimpleAfterReturningAdvice implements AfterReturningAdvice {
         MessageWriter target = new MessageWriter();
 
         // create the proxy
-           ProxyFactory pf = new ProxyFactory();
+        ProxyFactory pf = new ProxyFactory();
 
         pf.addAdvice(new SimpleAfterReturningAdvice());
         pf.setTarget(target);
@@ -18,13 +18,13 @@ public class SimpleAfterReturningAdvice implements AfterReturningAdvice {
         MessageWriter proxy = (MessageWriter) pf.getProxy();
 
         // write the messages
-            proxy.writeMessage();
+        proxy.writeMessage();
     }
 
-        public void afterReturning(Object returnValue, Method method,
-                                   Object[] args, Object target) throws Throwable {
+    public void afterReturning(Object returnValue, Method method,
+                               Object[] args, Object target) throws Throwable {
         System.out.println("");
         System.out.println("After method: " + method.getName());
     }
 
-    }
+}

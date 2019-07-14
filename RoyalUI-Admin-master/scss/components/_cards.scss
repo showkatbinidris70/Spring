@@ -23,7 +23,7 @@
     font-weight: 400;
     margin-top: 0.625rem;
     margin-bottom: 0.625rem;
-  
+
   }
   .card-description {
     margin-bottom: .875rem;
@@ -31,20 +31,20 @@
     color: $card-description-color;
   }
   &.card-outline-success {
-		border: 1px solid theme-color("success");
-	}
-	&.card-outline-primary {
-		border: 1px solid theme-color("primary");
-	}
-	&.card-outline-warning {
-		border: 1px solid theme-color("warning");
-	}
-	&.card-outline-danger {
-		border: 1px solid theme-color("danger");
-	}
-	&.card-rounded {
-		@include border-radius(5px);
-	}
+    border: 1px solid theme-color("success");
+  }
+  &.card-outline-primary {
+    border: 1px solid theme-color("primary");
+  }
+  &.card-outline-warning {
+    border: 1px solid theme-color("warning");
+  }
+  &.card-outline-danger {
+    border: 1px solid theme-color("danger");
+  }
+  &.card-rounded {
+    @include border-radius(5px);
+  }
 
   &.card-faded {
     background: #b5b0b2;
@@ -58,7 +58,7 @@
     position: relative;
     .card-img-absolute {
       position: absolute;
-      top:0;
+      top: 0;
       right: 0;
       height: 100%;
     }
@@ -73,7 +73,7 @@
         font-size: 20px;
       }
       .weather-temp {
-        margin-top: .5rem;        
+        margin-top: .5rem;
         margin-bottom: 0;
         opacity: .5;
         font-size: .75rem;

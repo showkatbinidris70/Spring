@@ -57,7 +57,7 @@
           -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
         }
-  
+
         &:after {
           @include transition(all);
           transition-duration: 0s;
@@ -77,7 +77,7 @@
         }
       }
       &:checked {
-        +.input-helper {
+        + .input-helper {
           &:before {
             background: theme-color(primary);
             border-width: 0;
@@ -113,7 +113,7 @@
       }
     }
     input[type="radio"] {
-      +.input-helper {
+      + .input-helper {
         &:before {
           position: absolute;
           content: "";
@@ -163,7 +163,7 @@
       }
 
       &:checked {
-        +.input-helper {
+        + .input-helper {
           &:before {
             background: theme-color(primary);
             border-width: 0;
@@ -210,13 +210,13 @@
       label {
         input[type="checkbox"],
         input[type="radio"] {
-          +.input-helper {
+          + .input-helper {
             &:before {
               border-color: theme-color($color);
             }
           }
           &:checked {
-            +.input-helper {
+            + .input-helper {
               &:before {
                 background: $value;
               }

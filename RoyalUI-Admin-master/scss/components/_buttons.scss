@@ -53,11 +53,12 @@
 
 .btn-toolbar {
   .btn-group {
-    +.btn-group {
+    + .btn-group {
       @extend .ml-2;
     }
   }
 }
+
 /*social buttons*/
 @each $color, $value in $social-colors {
   .btn-#{$color} {
@@ -67,6 +68,7 @@
     @include social-outline-button(social-color($color));
   }
 }
+
 /* inverse buttons */
 @each $color, $value in $theme-colors {
   .btn-inverse-#{$color} {

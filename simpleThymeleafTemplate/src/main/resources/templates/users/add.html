@@ -14,14 +14,14 @@
         <h1>Add user</h1>
         <h2 th:text="${successMsg}"></h2>
         <form th:object="${user}" th:>
-        <div class="row">
-            <div class="col.md-3">
-            <label for="name">Name</label>
+            <div class="row">
+                <div class="col.md-3">
+                    <label for="name">Name</label>
+                </div>
+                <div class="col.md-9">
+                    <input class="form-control" type="text" th:field="*{name}" id="name"/>
+                </div>
             </div>
-            <div class="col.md-9">
-                <input class="form-control" type="text" th:field="*{name}" id="name"/>
-            </div>
-        </div>
             <div class="row">
                 <div class="col.md-3">
                     <label for="userName">User Name</label>
@@ -43,7 +43,7 @@
                     <label for="Gender">Gender</label>
                 </div>
                 <div class="col.md-9">
-                   Male <input class="radio radio-menu-item" type="radio" th:field="*{gender}" th:value="Male"/>
+                    Male <input class="radio radio-menu-item" type="radio" th:field="*{gender}" th:value="Male"/>
                     Female <input class="radio radio-menu-item" type="radio" th:field="*{gender}" th:value="Female"/>
                 </div>
             </div>
@@ -52,12 +52,12 @@
                     <label>Country</label>
                 </div>
                 <div class="col.md-9">
-                   <select th:field="*{country}">
-                       <option value="">Select A Count</option>
-                       <option value="">Select A Count</option>
-                       <option value="">Select A Count</option>
-                       <option value="">Select A Count</option>
-                   </select>
+                    <select th:field="*{country}">
+                        <option value="">Select A Count</option>
+                        <option value="">Select A Count</option>
+                        <option value="">Select A Count</option>
+                        <option value="">Select A Count</option>
+                    </select>
                 </div>
             </div>
         </form>

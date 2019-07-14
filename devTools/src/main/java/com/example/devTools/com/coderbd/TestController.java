@@ -7,11 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @GetMapping(value = "/")
-    public String index(){
+    public String index() {
         return "Hello Spring Rest Api";
     }
+
     @GetMapping(value = "/test")
-    public String indexTest(){
+    public String indexTest() {
         return "Hello Spring Rest Api";
     }
 

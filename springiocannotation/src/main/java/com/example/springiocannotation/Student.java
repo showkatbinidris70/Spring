@@ -1,7 +1,7 @@
 package com.example.springiocannotation;
 
 public class Student {
-    private  Stirng name;
+    private Stirng name;
 
     public Stirng getName() {
         return name;

@@ -20,9 +20,8 @@ gulp.paths = {
 var paths = gulp.paths;
 
 
-
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass'], function() {
+gulp.task('serve', ['sass'], function () {
 
     browserSync.init({
         port: 3100,
@@ -38,9 +37,8 @@ gulp.task('serve', ['sass'], function() {
 });
 
 
-
 // Static Server without watching scss files
-gulp.task('serve:lite', function() {
+gulp.task('serve:lite', function () {
 
     browserSync.init({
         server: "./",
@@ -55,7 +53,6 @@ gulp.task('serve:lite', function() {
 });
 
 
-
 gulp.task('sass', function () {
     return gulp.src('./scss/**/style.scss')
         .pipe(sourcemaps.init())
@@ -66,43 +63,41 @@ gulp.task('sass', function () {
 });
 
 
-
 gulp.task('sass:watch', function () {
     gulp.watch('./scss/**/*.scss');
 });
 
 
 /*sequence for injecting partials and replacing paths*/
-gulp.task('inject', function() {
-  runSequence('injectPartial' , 'injectCommonAssets' , 'injectLayoutStyles', 'replacePath');
+gulp.task('inject', function () {
+    runSequence('injectPartial', 'injectCommonAssets', 'injectLayoutStyles', 'replacePath');
 });
-
 
 
 /* inject partials like sidebar and navbar */
 gulp.task('injectPartial', function () {
-  return gulp.src("./**/*.html", { base: "./" })
-    .pipe(injectPartials())
-    .pipe(gulp.dest("."));
+    return gulp.src("./**/*.html", {base: "./"})
+        .pipe(injectPartials())
+        .pipe(gulp.dest("."));
 });
 
 
 /* inject Js and CCS assets into HTML */
 gulp.task('injectCommonAssets', function () {
-  return gulp.src('./**/*.html')
-    .pipe(inject(gulp.src([ 
-        './vendors/ti-icons/css/themify-icons.css',
-        './vendors/base/vendor.bundle.base.css', 
-        './vendors/base/vendor.bundle.base.js'
-    ], {read: false}), {name: 'plugins', relative: true}))
-    .pipe(inject(gulp.src([
-        './css/*.css', 
-        './js/off-canvas.js', 
-        './js/hoverable-collapse.js', 
-        './js/template.js', 
-        './js/todolist.js'
-    ], {read: false}), {relative: true}))
-    .pipe(gulp.dest('.'));
+    return gulp.src('./**/*.html')
+        .pipe(inject(gulp.src([
+            './vendors/ti-icons/css/themify-icons.css',
+            './vendors/base/vendor.bundle.base.css',
+            './vendors/base/vendor.bundle.base.js'
+        ], {read: false}), {name: 'plugins', relative: true}))
+        .pipe(inject(gulp.src([
+            './css/*.css',
+            './js/off-canvas.js',
+            './js/hoverable-collapse.js',
+            './js/template.js',
+            './js/todolist.js'
+        ], {read: false}), {relative: true}))
+        .pipe(gulp.dest('.'));
 });
 
 /* inject Js and CCS assets into HTML */
@@ -115,51 +110,51 @@ gulp.task('injectLayoutStyles', function () {
 });
 
 /*replace image path and linking after injection*/
-gulp.task('replacePath', function(){
-    gulp.src(['./pages/*/*.html'], { base: "./" })
+gulp.task('replacePath', function () {
+    gulp.src(['./pages/*/*.html'], {base: "./"})
         .pipe(replace('="images/', '="../../images/'))
         .pipe(replace('href="pages/', 'href="../../pages/'))
         .pipe(replace('href="documentation/', 'href="../../documentation/'))
         .pipe(replace('href="index.html"', 'href="../../index.html"'))
         .pipe(gulp.dest('.'));
-    gulp.src(['./pages/*.html'], { base: "./" })
+    gulp.src(['./pages/*.html'], {base: "./"})
         .pipe(replace('="images/', '="../images/'))
         .pipe(replace('"pages/', '"../pages/'))
         .pipe(replace('href="index.html"', 'href="../index.html"'))
         .pipe(gulp.dest('.'));
-    gulp.src(['./index.html'], { base: "./" })
+    gulp.src(['./index.html'], {base: "./"})
         .pipe(replace('="images/', '="images/'))
         .pipe(gulp.dest('.'));
 });
 
 /*sequence for building vendor scripts and styles*/
-gulp.task('bundleVendors', function() {
-    runSequence('clean:vendors', 'buildBaseVendorStyles','buildBaseVendorScripts','copyRecursiveVendorFiles');
+gulp.task('bundleVendors', function () {
+    runSequence('clean:vendors', 'buildBaseVendorStyles', 'buildBaseVendorScripts', 'copyRecursiveVendorFiles');
 });
 
 gulp.task('clean:vendors', function () {
     return del([
-      'vendors/**/*'
+        'vendors/**/*'
     ]);
 });
 
 /*Building vendor scripts needed for basic template rendering*/
-gulp.task('buildBaseVendorScripts', function() {
+gulp.task('buildBaseVendorScripts', function () {
     return gulp.src([
-        './node_modules/jquery/dist/jquery.min.js', 
-        './node_modules/popper.js/dist/umd/popper.min.js', 
-        './node_modules/bootstrap/dist/js/bootstrap.min.js', 
+        './node_modules/jquery/dist/jquery.min.js',
+        './node_modules/popper.js/dist/umd/popper.min.js',
+        './node_modules/bootstrap/dist/js/bootstrap.min.js',
         './node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js'
     ])
-      .pipe(concat('vendor.bundle.base.js'))
-      .pipe(gulp.dest('./vendors/base'));
+        .pipe(concat('vendor.bundle.base.js'))
+        .pipe(gulp.dest('./vendors/base'));
 });
 
 /*Building vendor styles needed for basic template rendering*/
-gulp.task('buildBaseVendorStyles', function() {
+gulp.task('buildBaseVendorStyles', function () {
     return gulp.src(['./node_modules/perfect-scrollbar/css/perfect-scrollbar.css'])
-      .pipe(concat('vendor.bundle.base.css'))
-      .pipe(gulp.dest('./vendors/base'));
+        .pipe(concat('vendor.bundle.base.css'))
+        .pipe(gulp.dest('./vendors/base'));
 });
 
 /* Scripts for addons */

@@ -10,11 +10,11 @@ public class SecurityManager {
         threadLocal.set(new UserInfo(userName, password));
     }
 
-        public void logout() {
+    public void logout() {
         threadLocal.set(null);
     }
 
-        public UserInfo getLoggedOnUser() {
+    public UserInfo getLoggedOnUser() {
         return threadLocal.get();
     }
 }

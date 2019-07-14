@@ -106,20 +106,20 @@
 
       &.active {
         > .nav-link {
-            background: $sidebar-light-menu-active-bg;
-            position: relative;
-            i,
-            .menu-title,
-            .menu-arrow {
-              color: $sidebar-light-menu-active-color;
-            }
-            i {
-              &.menu-arrow {
-                &::before {
-                  content: "\e64b";
-                }
+          background: $sidebar-light-menu-active-bg;
+          position: relative;
+          i,
+          .menu-title,
+          .menu-arrow {
+            color: $sidebar-light-menu-active-color;
+          }
+          i {
+            &.menu-arrow {
+              &::before {
+                content: "\e64b";
               }
             }
+          }
         }
       }
     }
@@ -134,7 +134,7 @@
           > .nav-link, &[aria-expanded="true"] {
             background: $sidebar-light-menu-hover-bg;
             color: $sidebar-light-menu-hover-color;
-            border-radius: 0.437rem;                         
+            border-radius: 0.437rem;
           }
         }
         > .nav-link {
@@ -152,7 +152,7 @@
     }
     &.sub-menu {
       margin-bottom: 0;
-      margin-top:0;
+      margin-top: 0;
       list-style: none;
       padding: $sidebar-submenu-padding;
       background: $sidebar-light-menu-hover-bg;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -9,7 +9,7 @@
 <h1>Add Student</h1>
 <span style="..." th:text="${}"></span>
 
-<form  th:action="@{/profile}" th:method="get">
+<form th:action="@{/profile}" th:method="get">
 
     <label>Department</label>
     <select name="depid">
@@ -19,7 +19,7 @@
     </select>
     <label>Gender</label>
     <select name="gender">
-       <option th:value="m">Male</option>
+        <option th:value="m">Male</option>
         <option th:value="f">Female</option>
 
     </select>
@@ -31,13 +31,13 @@
         <th>Student Name</th>
         <th>Student Email</th>
         <th>Department Name</th>
-    <!--</tr>-->
-    <!--<tr th:each="s : ${listbydepandgen}">-->
+        <!--</tr>-->
+        <!--<tr th:each="s : ${listbydepandgen}">-->
         <!--<td th:text="${s.id}"></td>-->
         <!--<td th:text="${s.name}"></td>-->
         <!--<td th:text="${s.email}"></td>-->
         <!--<td th:text="${s.department.name}"></td>-->
-    <!--</tr>-->
+        <!--</tr>-->
 </table>
 
 </body>

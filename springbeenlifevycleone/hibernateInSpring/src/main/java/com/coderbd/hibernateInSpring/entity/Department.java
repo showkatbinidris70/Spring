@@ -11,8 +11,8 @@ public class Department {
     private Long id;
 
     @NotEmpty
-    @Column(name = "dep_name",unique = true)
-    @Size(min = 3,max = 20)
+    @Column(name = "dep_name", unique = true)
+    @Size(min = 3, max = 20)
     private String name;
 
     public Department() {

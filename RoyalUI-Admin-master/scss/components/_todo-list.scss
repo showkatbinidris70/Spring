@@ -39,13 +39,13 @@
       font-size: .9375rem;
       padding: 1.063rem 0rem;
       border-bottom: 1px solid $border-color;
-      .form-check{
+      .form-check {
         @extend %ellipsor;
         max-width: 90%;
         margin-top: .25rem;
         margin-bottom: .25rem;
-        .form-check-label{
-          @extend%ellipsor;
+        .form-check-label {
+          @extend %ellipsor;
         }
       }
     }

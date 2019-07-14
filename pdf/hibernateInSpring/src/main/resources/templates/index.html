@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -8,8 +8,8 @@
 <h1>Add Department</h1>
 <span style="color:red;" th:text="${errMsg}"></span>
 <span style="color:green;" th:text="${successMsg}"></span>
-<form th:object="${department}" th:action="@{/}", th:method="POST">
-    <input type="text" th:field="*{name}" >
+<form th:object="${department}" th:action="@{/}" , th:method="POST">
+    <input type="text" th:field="*{name}">
     <button type="submit">Save</button>
 </form>
 

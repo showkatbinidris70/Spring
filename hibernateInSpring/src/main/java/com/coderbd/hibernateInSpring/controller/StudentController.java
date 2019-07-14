@@ -22,50 +22,51 @@ public class StudentController {
     private DepartmentRepo departmentRepo;
 
     @GetMapping(value = "/student")
-    public String displayStudent(Model model){
-        model.addAttribute("student",new Student());
-        model.addAttribute("list",this.repo.findAll());
-        model.addAttribute("deplist",this.departmentRepo.findAll());
+    public String displayStudent(Model model) {
+        model.addAttribute("student", new Student());
+        model.addAttribute("list", this.repo.findAll());
+        model.addAttribute("deplist", this.departmentRepo.findAll());
 
         return "student";
     }
+
     @PostMapping(value = "/student")
-    public String save(Model model, @Valid Student student, BindingResult result){
-      if(result.hasErrors()){
-          model.addAttribute("errMsg","Sometrhing Wrong");
-      }else {
-          this.repo.save(student);
-          model.addAttribute("successMsg","Data Save Successfully");
-          model.addAttribute("list",this.repo.findAll());
-          model.addAttribute("deplist",this.departmentRepo.findAll());
-      }
+    public String save(Model model, @Valid Student student, BindingResult result) {
+        if (result.hasErrors()) {
+            model.addAttribute("errMsg", "Sometrhing Wrong");
+        } else {
+            this.repo.save(student);
+            model.addAttribute("successMsg", "Data Save Successfully");
+            model.addAttribute("list", this.repo.findAll());
+            model.addAttribute("deplist", this.departmentRepo.findAll());
+        }
         return "student";
     }
 
     @GetMapping(value = "/stubydep")
-    public String showStudentsByDepartment(Model model){
-        Department department =new Department();
+    public String showStudentsByDepartment(Model model) {
+        Department department = new Department();
         department.setId(1L);
-        model.addAttribute("listbydep",this.repo.findAllByDepartment(department));
+        model.addAttribute("listbydep", this.repo.findAllByDepartment(department));
         return "studentbydep";
     }
 
 
     @GetMapping(value = "/profile")
     public String showStudentsById(Model model, @RequestParam(value = "studentid", required = false,
-            defaultValue = "1") Long id){
-        model.addAttribute("slist",this.repo.findAll());
-        model.addAttribute("stu",this.repo.getOne(id));
+            defaultValue = "1") Long id) {
+        model.addAttribute("slist", this.repo.findAll());
+        model.addAttribute("stu", this.repo.getOne(id));
         return "profilepage";
     }
 
     @GetMapping(value = "/stubydepandgender")
     public String showStudentsByDepartmentAndGender(Model model, @RequestParam(value = "depid", required = false, defaultValue = "1")
             Long id, @RequestParam(value = "gender", required = false,
-    defaultValue = "m") String gender){
-        Department department =new Department();
+            defaultValue = "m") String gender) {
+        Department department = new Department();
         department.setId(1L);
-        model.addAttribute("listbydep",this.repo.findAllByDepartmentAndGender(department, gender));
+        model.addAttribute("listbydep", this.repo.findAllByDepartmentAndGender(department, gender));
         model.addAttribute("deplist", this.departmentRepo.findAll());
         return "studentbydep";
     }

@@ -12,7 +12,7 @@ public class KeyGenerator {
     public long getKey() {
         int x = rand.nextInt(3);
 
-        if(x == 1) {
+        if (x == 1) {
             return WEAK_KEY;
         } else {
             return STRONG_KEY;

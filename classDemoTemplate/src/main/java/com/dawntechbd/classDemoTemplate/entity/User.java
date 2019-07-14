@@ -16,14 +16,14 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @NotEmpty(message =  "Please Enter RoleName")
+    @NotEmpty(message = "Please Enter RoleName")
     @Column(name = "username", unique = true)
     private String userName;
 
-    @NotEmpty(message =  "Please Enter Password")
+    @NotEmpty(message = "Please Enter Password")
     @Column(name = "password")
     @Size(min = 8, message = "At least 8 Characters")
-    private  String password;
+    private String password;
 
     @Column(name = "first_name")
     private String firstName;
@@ -33,24 +33,24 @@ public class User {
 
     @Email
     @NotEmpty(message = "Please Enter Email Address")
-    @Column(name = "enail",unique = true)
+    @Column(name = "enail", unique = true)
     private String email;
 
     @Length(min = 11, message = "*Your mobile must have at lest 11 chatacer")
     @NotEmpty(message = "*Please enter Your Modile")
-    @Column(name = "mobile" , unique = true)
+    @Column(name = "mobile", unique = true)
     private String mobile;
     @Column(name = "joining_date")
     private Date joiningDate;
 
-   @Column(name = "is_Active")
+    @Column(name = "is_Active")
     private boolean isActice;
 
-    @Size(min = 0,max = 100)
+    @Size(min = 0, max = 100)
     @Column(name = "activation_key")
     private String activationKey;
 
-    @Size(min = 0,max = 100)
+    @Size(min = 0, max = 100)
     @Column(name = "reset_pass_key")
     private String resetPasswordKey;
 

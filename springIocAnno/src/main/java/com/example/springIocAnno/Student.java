@@ -10,7 +10,8 @@ public class Student {
     public void setName(String name) {
         this.name = name;
     }
-    public void displayInfo(){
+
+    public void displayInfo() {
         System.out.println("hello: " + name);
     }
 }

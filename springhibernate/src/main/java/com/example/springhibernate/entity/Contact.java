@@ -29,5 +29,5 @@ public class Contact {
     private Set<ContactDetails> contactDetailsSet;
 
     @OneToMany(mappedBy = "contacts")
-    private Set<Hobby>hobbies;
+    private Set<Hobby> hobbies;
 }

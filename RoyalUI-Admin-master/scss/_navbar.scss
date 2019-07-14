@@ -7,7 +7,7 @@
   -moz-transition: background $action-transition-duration $action-transition-timing-function;
   -ms-transition: background $action-transition-duration $action-transition-timing-function;
   -webkit-box-shadow: $navbar-box-shadow;
-  -moz-box-shadow:  $navbar-box-shadow;
+  -moz-box-shadow: $navbar-box-shadow;
   box-shadow: $navbar-box-shadow;
 
   .navbar-brand-wrapper {
@@ -23,7 +23,7 @@
       font-size: 1.5rem;
       margin-right: 0;
       padding: .25rem 0;
-      
+
       &.brand-logo-mini {
         display: none;
       }
@@ -35,7 +35,7 @@
       }
 
       img {
-        width: calc(#{$sidebar-width-lg} - 130px );
+        width: calc(#{$sidebar-width-lg} - 130px);
         max-width: 100%;
         height: 34px;
         margin: auto;
@@ -47,7 +47,7 @@
       padding-left: 0;
       text-align: center;
       img {
-        width: calc(#{$sidebar-width-icon} - 30px );
+        width: calc(#{$sidebar-width-icon} - 30px);
         max-width: 100%;
         margin: auto;
         height: 30px;
@@ -83,8 +83,8 @@
           display: none;
         }
       }
-      &.navbar-toggler-right{
-        @media (max-width:991px){
+      &.navbar-toggler-right {
+        @media (max-width: 991px) {
           padding-left: 15px;
           padding-right: 0;
         }
@@ -163,17 +163,17 @@
                 display: none;
               }
             }
-          }  
+          }
         }
         &.dropdown {
           .dropdown-menu {
-            @extend .dropdownAnimation;        
+            @extend .dropdownAnimation;
             border: none;
             -webkit-box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.2);
             box-shadow: 0px 3px 21px 0px rgba(0, 0, 0, 0.2);
           }
           .navbar-dropdown {
-            position: absolute;            
+            position: absolute;
             font-size: 0.9rem;
             margin-top: 0;
             right: 0;
@@ -204,7 +204,7 @@
                   @extend .justify-content-center;
                   color: $white;
                   i {
-                    font-size: 17px;                    
+                    font-size: 17px;
                   }
                 }
               }
@@ -297,12 +297,13 @@
   }
 
 }
-@media (max-width:991px) {
+
+@media (max-width: 991px) {
   .navbar {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
     .navbar-brand-wrapper {
       width: 55px;
       .navbar-brand {
@@ -324,11 +325,11 @@
   }
 }
 
-@media (max-width:480px) {
+@media (max-width: 480px) {
   .navbar {
     .navbar-brand-wrapper {
       width: 55px;
-      .brand-logo-mini{
+      .brand-logo-mini {
         padding-top: 0px;
       }
     }

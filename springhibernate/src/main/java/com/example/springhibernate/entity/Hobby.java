@@ -11,7 +11,7 @@ public class Hobby {
 
     @ManyToMany
     @JoinTable(name = "hobby_contact",
-        joinColumns = @JoinColumn(name = "hobby_id"),
+            joinColumns = @JoinColumn(name = "hobby_id"),
             inverseJoinColumns = @JoinColumn(name = "contact_id")
     )
     private Set<Contact> contacts;

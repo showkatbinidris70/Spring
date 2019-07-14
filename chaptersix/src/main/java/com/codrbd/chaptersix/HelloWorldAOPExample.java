@@ -3,7 +3,7 @@ package com.codrbd.chaptersix;
 import org.springframework.aop.framework.ProxyFactory;
 
 public class HelloWorldAOPExample {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         MessageWriter target = new MessageWriter();
 
         ProxyFactory pf = new ProxyFactory();
@@ -11,7 +11,7 @@ public class HelloWorldAOPExample {
         pf.addAdvice(new MessageDecorator());
         pf.setTarget(target);
 
-        MessageWriter proxy = (MessageWriter)pf.getProxy();
+        MessageWriter proxy = (MessageWriter) pf.getProxy();
 
         target.writeMessage();
         System.out.println("");

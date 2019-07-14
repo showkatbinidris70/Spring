@@ -1,7 +1,6 @@
 package com.example.springjdbc;
 
 
-
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -18,11 +17,13 @@ import java.util.stream.Collectors;
 
 public class JdbcsimpleApplication implements CommandLineRunner {
 
-     private static final Logger log = (Logger) LoggerFactory.getLogger(JdbcsimpleApplication.class);
-     public static void main(String[] args){
-         SpringApplication.run(JdbcsimpleApplication.class, args);
-     }
-     @Autowired
+    private static final Logger log = (Logger) LoggerFactory.getLogger(JdbcsimpleApplication.class);
+
+    public static void main(String[] args) {
+        SpringApplication.run(JdbcsimpleApplication.class, args);
+    }
+
+    @Autowired
     JdbcTemplate jdbcTemplate;
 
     @Override
@@ -51,7 +52,7 @@ public class JdbcsimpleApplication implements CommandLineRunner {
         log.info("Querying for customer records where first_name = 'Josh':");
         jdbcTemplate.query(
                 "SELECT id, first_name, last_name FROM customers WHERE first_name = ?",
-                new Object[] { "Josh" },
+                new Object[]{"Josh"},
                 (rs, rowNum) -> new Customer(rs.getLong("id"),
                         rs.getString("first_name"), rs.getString("last_name"))
         ).forEach(customer -> log.info(customer.toString()));

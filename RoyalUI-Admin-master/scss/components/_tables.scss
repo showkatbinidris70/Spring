@@ -43,10 +43,10 @@
   }
   &.table-hover {
     thead,
-      tbody {
-        tr {
-          cursor: pointer;
-        }
+    tbody {
+      tr {
+        cursor: pointer;
       }
+    }
   }
 }

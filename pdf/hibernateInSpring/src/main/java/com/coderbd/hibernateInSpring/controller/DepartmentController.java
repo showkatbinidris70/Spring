@@ -17,21 +17,22 @@ public class DepartmentController {
     private DepartmentRepo repo;
 
     @GetMapping(value = "/")
-    public String displayIndex(Model model){
-        model.addAttribute("department",new Department());
-        model.addAttribute("list",this.repo.findAll());
+    public String displayIndex(Model model) {
+        model.addAttribute("department", new Department());
+        model.addAttribute("list", this.repo.findAll());
 
         return "index";
     }
+
     @PostMapping(value = "/")
-    public String save(Model model, @Valid Department department, BindingResult result){
-      if(result.hasErrors()){
-          model.addAttribute("errMsg","Sometrhing Wrong");
-      }else {
-          this.repo.save(department);
-          model.addAttribute("successMsg","Data Save Successfully");
-          model.addAttribute("list",this.repo.findAll());
-      }
+    public String save(Model model, @Valid Department department, BindingResult result) {
+        if (result.hasErrors()) {
+            model.addAttribute("errMsg", "Sometrhing Wrong");
+        } else {
+            this.repo.save(department);
+            model.addAttribute("successMsg", "Data Save Successfully");
+            model.addAttribute("list", this.repo.findAll());
+        }
         return "index";
     }
 }

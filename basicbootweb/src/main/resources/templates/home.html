@@ -7,7 +7,7 @@
 </head>
 <body>
 Home.................
-<form th:object="${student}" th:action="@{/}" th:method="post",>
+<form th:object="${student}" th:action="@{/}" th:method="post" ,>
     <input type="text" th:field="*{name}"/>
     <button type="submit">Send</button>
 </form>

@@ -10,12 +10,15 @@ import java.util.stream.Collectors;
 
 public class CustomUserDetails extends User implements UserDetails {
 
-    public CustomUserDetails(final User user){super(user);}
+    public CustomUserDetails(final User user) {
+        super(user);
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return getRoles()
                 .stream()
-                .map(role -> new SimpleGrantedAuthority("Role_"+role.getRolename()))
+                .map(role -> new SimpleGrantedAuthority("Role_" + role.getRolename()))
                 .collect(Collectors.toList());
     }
 

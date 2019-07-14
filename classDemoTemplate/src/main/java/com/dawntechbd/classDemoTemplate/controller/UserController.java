@@ -21,16 +21,16 @@ public class UserController {
     @Autowired
     private PasswordEncoder encoder;
 
-    @RequestMapping(value = "/user/create",method = RequestMethod.GET)
-    public ModelAndView getUser(){
+    @RequestMapping(value = "/user/create", method = RequestMethod.GET)
+    public ModelAndView getUser() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("user", new User());
         modelAndView.setViewName("userPage");
         return modelAndView;
     }
 
-    @RequestMapping(value = "/user/create",method = RequestMethod.POST)
-    public String saveRole(@Valid User user, BindingResult bindingResult){
+    @RequestMapping(value = "/user/create", method = RequestMethod.POST)
+    public String saveRole(@Valid User user, BindingResult bindingResult) {
         user.setPassword(encoder.encode(user.getPassword()));
         this.repo.save(user);
         return "userPage";

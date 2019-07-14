@@ -19,43 +19,43 @@ public class UserController {
     private UserRepository userRepository;
 
     @GetMapping(value = "list")
-    public String getList(Model model){
+    public String getList(Model model) {
 
         List<User> list = this.userRepository.findAll();
-        model.addAttribute("list",list);
+        model.addAttribute("list", list);
         return "users/list";
     }
 
 
     @GetMapping(value = "/add")
-    public String add(Model model){
-        model.addAttribute("user",new User());
+    public String add(Model model) {
+        model.addAttribute("user", new User());
         return "users/add";
     }
 
     @GetMapping(value = "/add")
-    public String addView(Model model){
-        model.addAttribute("user",new User());
+    public String addView(Model model) {
+        model.addAttribute("user", new User());
         return "users/add";
     }
 
     @GetMapping(value = "/add")
-    public String add(Model model,@Valid User user ){
-        if (user == null){
+    public String add(Model model, @Valid User user) {
+        if (user == null) {
             this.userRepository.save(user);
-            model.addAttribute("successMsg","User Saved Successfully")
+            model.addAttribute("successMsg", "User Saved Successfully")
         }
 
         return "users/add";
     }
 
     @GetMapping(value = "/edit/{id}")
-    public String edit(@PathVariable Long id){
+    public String edit(@PathVariable Long id) {
         return "users/edit";
     }
 
     @GetMapping(value = "/delete/{id}")
-    public String delete(@PathVariable Long id){
+    public String delete(@PathVariable Long id) {
         return "redicrect:/user/list";
     }
 

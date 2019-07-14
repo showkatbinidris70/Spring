@@ -1,8 +1,6 @@
 package com.page197;
 
 
-
-
 import org.springframework.aop.framework.ProxyFactory;
 
 public class AfterAdviceExample {
@@ -10,11 +8,11 @@ public class AfterAdviceExample {
     public static void main(String[] args) {
         KeyGenerator keyGen = getKeyGenerator();
 
-        for(int x = 0; x < 10; x++) {
+        for (int x = 0; x < 10; x++) {
             try {
                 long key = keyGen.getKey();
                 System.out.println("Key: " + key);
-            } catch(SecurityException ex) {
+            } catch (SecurityException ex) {
                 System.out.println("Weak Key Generated!");
             }
         }
@@ -29,7 +27,7 @@ public class AfterAdviceExample {
 
         factory.addAdvice(new WeakKeyCheckAdvice());
 
-        return (KeyGenerator)factory.getProxy();
+        return (KeyGenerator) factory.getProxy();
     }
 }
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"  xmlns:th="http://thymeleaf.org">
+<html lang="en" xmlns:th="http://thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -10,7 +10,7 @@
 </h1>
 <span style="color: red;" th:text="${errMsg}"></span>
 <span style="color: green;" th:text="${successMsg}"></span>
-<form th:object="${department}" th:action="@{/}", th:method="POST">
+<form th:object="${department}" th:action="@{/}" , th:method="POST">
     <input type="text" th:field="*{name}"/>
     <input type="text" th:field="*{email}"/>
     <select th:field="*{department}">

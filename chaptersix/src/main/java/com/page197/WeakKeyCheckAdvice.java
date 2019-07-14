@@ -7,7 +7,7 @@ import org.springframework.aop.AfterReturningAdvice;
 public class WeakKeyCheckAdvice implements AfterReturningAdvice {
 
     public void afterReturning(Object returnValue, Method method,
-                               Object[] args,Object target) throws Throwable {
+                               Object[] args, Object target) throws Throwable {
 
         if ((target instanceof KeyGenerator)
                 && ("getKey".equals(method.getName()))) {
