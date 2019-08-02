@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>com.coderbd.demotampate.entity</OriginalElement>
+  <nodes>
+    <node x="588.8774999999998" y="256.0">com.coderbd.demotampate.entity.Customer</node>
+    <node x="40.0" y="289.0">com.coderbd.demotampate.entity.ShippingDetails</node>
+    <node x="284.44916666666666" y="0.0">com.coderbd.demotampate.entity.Company</node>
+    <node x="272.94916666666666" y="289.0">com.coderbd.demotampate.entity.Branch</node>
+    <node x="22.429166666666674" y="976.0">com.coderbd.demotampate.entity.Packing</node>
+    <node x="10.5" y="599.0">com.coderbd.demotampate.entity.Parcel</node>
+    <node x="378.85749999999996" y="1188.0">com.coderbd.demotampate.entity.RecivingDetails</node>
+    <node x="155.85749999999993" y="1188.0">com.coderbd.demotampate.entity.SendingDetails</node>
+    <node x="449.3774999999999" y="588.0">com.coderbd.demotampate.entity.Employee</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.coderbd.demotampate.entity.Customer" target="com.coderbd.demotampate.entity.Company">
+      <point x="0.0" y="-136.0" />
+      <point x="674.8774999999998" y="226.0" />
+      <point x="425.74916666666667" y="226.0" />
+      <point x="62.80000000000001" y="103.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.Branch" target="com.coderbd.demotampate.entity.Company">
+      <point x="0.0" y="-103.0" />
+      <point x="0.0" y="103.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.Employee" target="com.coderbd.demotampate.entity.Company">
+      <point x="43.0" y="-169.0" />
+      <point x="578.3774999999998" y="236.0" />
+      <point x="394.3491666666667" y="236.0" />
+      <point x="31.400000000000034" y="103.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.SendingDetails" target="com.coderbd.demotampate.entity.Branch">
+      <point x="0.0" y="-81.0" />
+      <point x="257.35749999999996" y="1168.0" />
+      <point x="311.5" y="1168.0" />
+      <point x="311.5" y="568.0" />
+      <point x="362.94916666666666" y="568.0" />
+      <point x="0.0" y="103.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.Parcel" target="com.coderbd.demotampate.entity.Company">
+      <point x="-77.66666666666669" y="-158.0" />
+      <point x="49.333333333333314" y="568.0" />
+      <point x="20.25" y="568.0" />
+      <point x="20.25" y="236.0" />
+      <point x="331.5491666666667" y="236.0" />
+      <point x="-31.399999999999977" y="103.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.RecivingDetails" target="com.coderbd.demotampate.entity.Employee">
+      <point x="63.66666666666666" y="-81.0" />
+      <point x="538.0241666666666" y="1168.0" />
+      <point x="569.75" y="1168.0" />
+      <point x="569.75" y="951.0" />
+      <point x="578.3774999999998" y="951.0" />
+      <point x="43.0" y="169.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.Packing" target="com.coderbd.demotampate.entity.Company">
+      <point x="-57.33333333333337" y="-81.0" />
+      <point x="51.0958333333333" y="951.0" />
+      <point x="0.0" y="951.0" />
+      <point x="0.0" y="226.0" />
+      <point x="300.14916666666664" y="226.0" />
+      <point x="-62.80000000000001" y="103.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.Parcel" target="com.coderbd.demotampate.entity.ShippingDetails">
+      <point x="0.0" y="-158.0" />
+      <point x="0.0" y="103.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.SendingDetails" target="com.coderbd.demotampate.entity.Packing">
+      <point x="-67.66666666666669" y="-81.0" />
+      <point x="189.69083333333325" y="1168.0" />
+      <point x="65.42916666666667" y="1168.0" />
+      <point x="-43.0" y="81.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.Packing" target="com.coderbd.demotampate.entity.Branch">
+      <point x="57.33333333333337" y="-81.0" />
+      <point x="165.76250000000005" y="951.0" />
+      <point x="286.4166666666667" y="951.0" />
+      <point x="286.4166666666667" y="558.0" />
+      <point x="326.94916666666666" y="558.0" />
+      <point x="-36.0" y="103.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.SendingDetails" target="com.coderbd.demotampate.entity.Employee">
+      <point x="67.66666666666669" y="-81.0" />
+      <point x="325.0241666666666" y="1168.0" />
+      <point x="505.1791666666667" y="1168.0" />
+      <point x="505.1791666666667" y="951.0" />
+      <point x="492.3774999999999" y="951.0" />
+      <point x="-43.0" y="169.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.Employee" target="com.coderbd.demotampate.entity.Branch">
+      <point x="-43.0" y="-169.0" />
+      <point x="492.3774999999999" y="568.0" />
+      <point x="434.94916666666666" y="568.0" />
+      <point x="72.0" y="103.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.Parcel" target="com.coderbd.demotampate.entity.Branch">
+      <point x="77.66666666666663" y="-158.0" />
+      <point x="204.66666666666663" y="548.0" />
+      <point x="290.94916666666666" y="548.0" />
+      <point x="-72.0" y="103.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.Packing" target="com.coderbd.demotampate.entity.Parcel">
+      <point x="0.0" y="-81.0" />
+      <point x="108.42916666666667" y="951.0" />
+      <point x="127.0" y="951.0" />
+      <point x="0.0" y="158.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.RecivingDetails" target="com.coderbd.demotampate.entity.Branch">
+      <point x="0.0" y="-81.0" />
+      <point x="474.35749999999996" y="1158.0" />
+      <point x="422.8066666666666" y="1158.0" />
+      <point x="422.8066666666666" y="568.0" />
+      <point x="398.94916666666666" y="568.0" />
+      <point x="36.0" y="103.0" />
+    </edge>
+    <edge source="com.coderbd.demotampate.entity.RecivingDetails" target="com.coderbd.demotampate.entity.Packing">
+      <point x="-63.66666666666666" y="-81.0" />
+      <point x="410.6908333333333" y="1158.0" />
+      <point x="151.42916666666667" y="1158.0" />
+      <point x="43.0" y="81.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="370.0" y="258.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
