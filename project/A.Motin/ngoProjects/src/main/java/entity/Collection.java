@@ -33,6 +33,7 @@ public class Collection {
     private Date collectionDate = new Date();
 
 
+
     @ManyToOne
     @JoinColumn(name = "loan_id", nullable = false)
     private Loan loan;

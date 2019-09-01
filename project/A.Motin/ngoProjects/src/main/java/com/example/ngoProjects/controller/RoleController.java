@@ -36,7 +36,7 @@ public class RoleController {
                 } else {
                     this.repo.save(role);
                     model.addAttribute("role", new Role());
-                    model.addAttribute("successMsg", "Alread Success");
+                    model.addAttribute("successMsg", "Data insert successfully");
                 }
             }
         }
@@ -62,24 +62,20 @@ public class RoleController {
             return "role/edit";
         } else {
             if (role != null) {
-                Role role1 = this.repo.findByRoleName(role.getRoleName());
-                if (role1 != null) {
-                    model.addAttribute("existMsg", "RoleName is already exist");
-                    return "role/edit";
-                } else {
-                    this.repo.save(role);
+                Role role1 = this.repo.getOne(id);
+                role1.setRoleName(role.getRoleName());
+                    this.repo.save(role1);
                     model.addAttribute("role", new Role());
-                    model.addAttribute("successMsg", "Alread Success");
+                    model.addAttribute("successMsg", "Update Successfully ");
                 }
-            }
         }
-        return "redirect:/list";
+        return "redirect:/role/list";
     }
 
-    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/del/{id}", method = RequestMethod.GET)
     public String delRole(@PathVariable("id") Long id) {
         this.repo.deleteById(id);
-        return "redirect:/list";
+        return "redirect:/role/list";
 
     }
 }

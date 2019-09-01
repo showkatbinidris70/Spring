@@ -6,4 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface DepositTypeRepo extends JpaRepository<DepositType, Long> {
+
+    //finding by typeName
+    DepositType findByTypeName(String typeName);
+    boolean existsDepositTypeByTypeName(String typeName);
 }

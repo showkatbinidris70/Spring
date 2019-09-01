@@ -9,6 +9,5 @@ public interface NomineeRepo extends JpaRepository<Nominee, Long> {
 
     //finding by roleNome
     Nominee findByNomineeName(String nomineeName);
-
     boolean existsRoleByNomineeName(String nomineeName);
 }

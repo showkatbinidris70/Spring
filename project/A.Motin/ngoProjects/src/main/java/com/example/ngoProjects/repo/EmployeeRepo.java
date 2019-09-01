@@ -12,11 +12,11 @@ public interface EmployeeRepo extends JpaRepository<Employee, Long> {
 
     //  finding by  employeeName or  employeeCode
 
-    Optional<Employee> findByEmployeeNameOrEmployeeCode(String employeeName, String employeeCode);
+    Optional<Employee> findByEmployeeNameOrEmployeeCode(String  employeeName, String  employeeCode);
 
-    Employee findByEmployeeName(String employeeName);
+    Employee findByEmployeeName(String  employeeName);
 
-    boolean existsByEmployeeCode(String employeeCode);
+    boolean existsByEmployeeCode(String  employeeCode);
 
 
 }

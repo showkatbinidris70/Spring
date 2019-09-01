@@ -26,15 +26,15 @@ public class NgoController {
 
 
     @PostMapping(value = "add")
-    public String addNgo(@Valid Ngo ngo, BindingResult result, Model model) {
-        if (result.hasErrors()) {
+    public String addNgo(@Valid Ngo ngo, BindingResult result, Model model){
+        if(result.hasErrors()){
             return "ngo/add";
-        } else {
-            if (ngo != null) {
+        }else {
+            if (ngo != null){
                 Ngo ngo1 = this.ngoRepo.findByName(ngo.getName());
-                if (ngo1 != null) {
+                if (ngo1 != null){
                     model.addAttribute("existMsg", "NgoName is already exist");
-                } else {
+                }else {
                     this.ngoRepo.save(ngo);
                     model.addAttribute("ngo", new Ngo());
                     model.addAttribute("successMsg", "Already Success");
@@ -50,6 +50,7 @@ public class NgoController {
         model.addAttribute("list", this.ngoRepo.findAll());
         return "ngo/list";
     }
+
 
 
     @GetMapping(value = "/edit/{id}")
@@ -85,6 +86,8 @@ public class NgoController {
         return "redirect:/list";
 
     }
+
+
 
 
 }

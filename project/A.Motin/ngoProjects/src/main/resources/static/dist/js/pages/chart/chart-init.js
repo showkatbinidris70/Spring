@@ -1,8 +1,7 @@
-$(function () {
-    var data = [5, 10, 15, 20, 15, 30, 40],
+ $(function(){
+            var data = [5, 10, 15, 20, 15, 30, 40],
         totalPoints = 100;
-
-    function getRandomData() {
+            function getRandomData() {
         if (data.length > 0) data = data.slice(1);
         // Do a random walk
         while (data.length < totalPoints) {
@@ -22,10 +21,9 @@ $(function () {
         }
         return res;
     }
-
-    // Set up the control widget
+     // Set up the control widget
     var updateInterval = 1000;
-    $("#updateInterval").val(updateInterval).change(function () {
+    $("#updateInterval").val(updateInterval).change(function() {
         var v = $(this).val();
         if (v && !isNaN(+v)) {
             updateInterval = +v;
@@ -37,10 +35,10 @@ $(function () {
             $(this).val("" + updateInterval);
         }
     });
-    var plot = $.plot("#placeholder1", [getRandomData()], {
+        var plot = $.plot("#placeholder1", [getRandomData()], {
         series: {
             shadowSize: 1, // Drawing is faster without shadows
-            lines: {fill: true, fillColor: 'transparent'},
+            lines: { fill: true, fillColor: 'transparent' },
         },
         yaxis: {
             min: 0,
@@ -63,16 +61,14 @@ $(function () {
             defaultTheme: false
         }
     });
-    window.onresize = function (event) {
+         window.onresize = function(event) {
         $.plot($("#placeholder1"), [getRandomData()]);
     }
-
-    function update() {
+        function update() {
         plot.setData([getRandomData()]);
         // Since the axes don't change, we don't need to call plot.setupGrid()
         plot.draw();
         setTimeout(update, updateInterval);
     }
-
     update();
-});
+        });

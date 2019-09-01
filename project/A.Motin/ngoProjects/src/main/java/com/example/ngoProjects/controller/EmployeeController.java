@@ -15,12 +15,10 @@ import javax.validation.Valid;
 @RequestMapping(value = "/employee/")
 public class EmployeeController {
 
-    @Autowired
-    private EmployeeRepo employeeRepo;
+  @Autowired
+  private EmployeeRepo employeeRepo;
 
 
-    @Autowired
-    private EmployeeTypeRepo employeeTypeRepo;
 
     @Autowired
     private NgoRepo ngoRepo;
@@ -29,40 +27,43 @@ public class EmployeeController {
     private BranchRepo branchRepo;
 
     @Autowired
+    private EmployeeTypeRepo employeeTypeRepo;
+
+    @Autowired
     private UserRepo userRepo;
 
 
     @GetMapping(value = "add")
     public String addEmployeeView(Model model) {
         model.addAttribute("employee", new Employee());
-        model.addAttribute("employeeList", this.employeeRepo.findAll());
+       model.addAttribute("employeeList", this.employeeRepo.findAll());
 
-        model.addAttribute("employeeTypeList", this.employeeTypeRepo.findAll());
         model.addAttribute("ngoList", this.ngoRepo.findAll());
         model.addAttribute("branchList", this.branchRepo.findAll());
+        model.addAttribute("employeeTypeList", this.employeeTypeRepo.findAll());
         model.addAttribute("userList", this.userRepo.findAll());
-        return "branch/add";
-    }
-
-
-    @PostMapping(value = "add")
-    public String addEmployee(@Valid Employee employee, BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            return "employee/add";
-        } else {
-            if (employee != null) {
-                Employee employee1 = this.employeeRepo.findByEmployeeName(employee.getEmployeeName());
-                if (employee1 != null) {
-                    model.addAttribute("existMsg", "EmployeeName is already exist");
-                } else {
-                    this.employeeRepo.save(employee);
-                    model.addAttribute("employee", new Employee());
-                    model.addAttribute("successMsg", "Already Success");
-                }
-            }
-        }
         return "employee/add";
     }
+
+
+  @PostMapping(value = "add")
+  public String addEmployee(@Valid Employee employee, BindingResult result, Model model){
+      if(result.hasErrors()){
+          return "employee/add";
+      }else {
+          if (employee != null){
+              Employee employee1 = this.employeeRepo.findByEmployeeName(employee.getEmployeeName());
+              if (employee1 != null){
+                  model.addAttribute("existMsg", "EmployeeName is already exist");
+              }else {
+                  this.employeeRepo.save(employee);
+                  model.addAttribute("employee", new Employee());
+                  model.addAttribute("successMsg", "Already Success");
+              }
+          }
+      }
+      return "employee/add";
+  }
 
 
     @GetMapping(value = "/list")
@@ -70,6 +71,7 @@ public class EmployeeController {
         model.addAttribute("list", this.employeeRepo.findAll());
         return "employee/list";
     }
+
 
 
     @GetMapping(value = "/edit/{id}")

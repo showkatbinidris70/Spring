@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Janata International Express</title>
+
+    <![endif]-->
+
+    <style type="text/css">
+        .err {
+            color: red;
+        }
+
+        .succes {
+            color: green;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div layout:fragment="custom-content">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h2 class="page-title">Janata International Express</h2>
+                <div class="ml-auto text-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Library</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+
+
+
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid" >
+
+
+        <span th:class="succes" th:text="${successMsg}"></span>
+
+        <div class="col-lg-8 col-md-12 col-12 col-sm-12">
+            <div class="login-brand">
+                A new Perspective of Business Delivery
+            </div>
+
+            <div>
+                <div class="card card-primary">
+                    <div class="card-header"><h5>Edit Branch</h5></div>
+                    <div class="card-body">
+                        <form th:object="${parcel}" action="#" th:action="@{/parcel/edit/} + ${id}" th:method="POST">
+                            <input type="hidden" th:value="*{id}" th:action="${parcel.id}"/>
+
+
+                            <div class="row">
+
+
+
+                                <!--this.parcelName = parcelName;-->
+                                <!--this.weight = weight;-->
+                                <!--this.height = height;-->
+                                <!--this.length = length;-->
+
+
+
+                                <div class="form-group col-12">
+                                    <label for="parcelName">parcelName</label>
+                                    <input id="parcelName" type="text" th:field="*{parcelName}" class="form-control"
+                                           name="parcelName">
+                                </div>
+
+
+                                <div class="form-group col-12">
+                                    <label for="weight">weight</label>
+                                    <input id="weight" type="text" th:field="*{weight}" class="form-control"
+                                           name="weight">
+                                </div>
+
+
+                                <div class="form-group col-12">
+                                    <label for="height">height</label>
+                                    <input id="height" type="text" th:field="*{height}" class="form-control"
+                                           name="height">
+                                </div>
+
+
+                                <div class="form-group col-12">
+                                    <label for="length">length</label>
+                                    <input id="length" type="text" th:field="*{length}" class="form-control"
+                                           name="length">
+                                </div>
+
+                                <!--this.sendFrom = sendFrom;-->
+                                <!--this.receivedTo = receivedTo;-->
+                                <!--this.cost = cost;-->
+
+                                <div class="form-group col-12">
+                                    <label for="sendFrom">sendFrom</label>
+                                    <input id="sendFrom" type="text" th:field="*{sendFrom}" class="form-control"
+                                           name="sendFrom">
+                                </div>
+
+
+                                <div class="form-group col-12">
+                                    <label for="receivedTo">receivedTo</label>
+                                    <input id="receivedTo" type="text" th:field="*{receivedTo}" class="form-control"
+                                           name="receivedTo">
+                                </div>
+
+
+                                <div class="form-group col-12">
+                                    <label for="cost">cost</label>
+                                    <input id="cost" type="text" th:field="*{cost}" class="form-control"
+                                           name="cost">
+                                </div>
+
+
+                                <!--this.productType = productType;-->
+                                <!--this.sendCountry = sendCountry;-->
+
+
+                                <!--<div class="form-group col-12">-->
+                                <!--<label for="productType">productType</label>-->
+                                <!--<input id="productType" type="text" th:field="*{productType}" class="form-control"-->
+                                <!--name="productType">-->
+                                <!--</div>-->
+
+                                <div class="form-group col-12">
+                                    <label>productType</label>
+                                    <input id="Mgender" type="radio" th:field="*{productType}" th:value="parcel"
+                                           class="form-control" name="productType">Parcel
+                                    <input id="Fgender" type="radio" th:field="*{productType}" th:value="document"
+                                           class="form-control" name="productType">Document
+                                </div>
+
+                                <div class="form-group col-12">
+                                    <label for="sendCountry">sendCountry</label>
+                                    <input id="sendCountry" type="text" th:field="*{sendCountry}" class="form-control"
+                                           name="sendCountry">
+                                </div>
+                                <!--this.sendState = sendState;-->
+                                <!--this.deliveryDate = deliveryDate;-->
+                                <!--this.bookingDate = bookingDate;-->
+
+
+
+                                <!--this.branch = branch;-->
+                                <!--this.company = company;-->
+                                <!--this.shippingDetails = shippingDetails;-->
+
+                                <div class="form-group col-12">
+                                    <label for="sendState">sendState</label>
+                                    <input id="sendState" type="text" th:field="*{sendState}" class="form-control"
+                                           name="sendState">
+                                </div>
+
+                                <!--<div class="form-group col-12">-->
+                                <!--<label for="birthDate">BirthDate</label>-->
+                                <!--<input id="birthDate" type="date" th:field="*{birthDate}" class="form-control"-->
+                                <!--name="birthDate">-->
+                                <!--</div>-->
+
+                                <div class="form-group col-12">
+                                    <label for="deliveryDate">deliveryDate</label>
+                                    <input id="deliveryDate" type="date" th:field="*{deliveryDate}" class="form-control"
+                                           name="deliveryDate">
+                                </div>
+
+
+
+                                <!--<div class="form-group col-12">-->
+                                <!--<label for="bookingDate">bookingDate</label>-->
+                                <!--<input id="bookingDate" type="date" th:field="*{bookingDate}" class="form-control"-->
+                                <!--name="bookingDate">-->
+                                <!--</div>-->
+
+                            </div>
+
+
+
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    Parcel Update
+                                </button>
+                            </div>
+
+
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a th:href="@{/}">Home</a>
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+</div>
+
+</body>
+
+</html>

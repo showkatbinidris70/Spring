@@ -60,6 +60,18 @@ public class User {
     private Date lastModifiedDate = new Date();
 
 
+    //password
+    @Column(nullable = true)
+    private String password;
+
+    //status
+    private boolean status;
+
+    //Token Activation
+    @Column(nullable = false)
+    private String conformationToken;
+
+
     ///ralation  between user class and role class
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
@@ -73,8 +85,15 @@ public class User {
     //Constructor
     public User() {
     }
-
-    public User(@NotNull @Size(min = 2, max = 30, message = "Hey, Size must be between 2 and 30") String username, String firstName, String lastName, Date birthDate, @Min(value = 18, message = "Hey, Minium Age is 18") byte age, String gender, String address, Date regiDate, String email, String mobile, Date lastModifiedDate, Set<Role> roles) {
+    public User(User user){
+        this.firstName=user.firstName;
+        this.username=user.username;
+        this.password=user.password;
+        this.email=user.email;
+        this.status=user.status;
+        this.roles=user.roles;
+    }
+    public User(@NotNull @Size(min = 2, max = 30, message = "Hey, Size must be between 2 and 30") String username, String firstName, String lastName, Date birthDate, @Min(value = 18, message = "Hey, Minium Age is 18") byte age, String gender, String address, Date regiDate, @NotEmpty(message = "Enter your valid email") String email, String mobile, Date lastModifiedDate, String password, boolean status, String conformationToken, Set<Role> roles) {
         this.username = username;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -86,9 +105,11 @@ public class User {
         this.email = email;
         this.mobile = mobile;
         this.lastModifiedDate = lastModifiedDate;
+        this.password = password;
+        this.status = status;
+        this.conformationToken = conformationToken;
         this.roles = roles;
     }
-
 
     //Setter and Getter method
     public Long getId() {
@@ -195,14 +216,43 @@ public class User {
         this.roles = roles;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+
+    public String getConformationToken() {
+        return conformationToken;
+    }
+
+    public void setConformationToken(String conformationToken) {
+        this.conformationToken = conformationToken;
+    }
+
+
+
+
 
     //Equals and hashCode
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
         return getAge() == user.getAge() &&
+                isStatus() == user.isStatus() &&
                 Objects.equals(getId(), user.getId()) &&
                 Objects.equals(getUsername(), user.getUsername()) &&
                 Objects.equals(getFirstName(), user.getFirstName()) &&
@@ -214,18 +264,21 @@ public class User {
                 Objects.equals(getEmail(), user.getEmail()) &&
                 Objects.equals(getMobile(), user.getMobile()) &&
                 Objects.equals(getLastModifiedDate(), user.getLastModifiedDate()) &&
+                Objects.equals(getPassword(), user.getPassword()) &&
+                Objects.equals(getConformationToken(), user.getConformationToken()) &&
                 Objects.equals(getRoles(), user.getRoles());
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(getId(), getUsername(), getFirstName(), getLastName(), getBirthDate(), getAge(), getGender(), getAddress(), getRegiDate(), getEmail(), getMobile(), getLastModifiedDate(), getRoles());
+        return Objects.hash(getId(), getUsername(), getFirstName(), getLastName(), getBirthDate(), getAge(), getGender(), getAddress(), getRegiDate(), getEmail(), getMobile(), getLastModifiedDate(), getPassword(), isStatus(), getConformationToken(), getRoles());
     }
 
 
-    // toString
 
+
+    // toString
 
     @Override
     public String toString() {
@@ -242,6 +295,9 @@ public class User {
                 ", email='" + email + '\'' +
                 ", mobile='" + mobile + '\'' +
                 ", lastModifiedDate=" + lastModifiedDate +
+                ", password='" + password + '\'' +
+                ", status=" + status +
+                ", conformationToken='" + conformationToken + '\'' +
                 ", roles=" + roles +
                 '}';
     }

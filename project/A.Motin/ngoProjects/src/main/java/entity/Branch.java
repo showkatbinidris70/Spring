@@ -20,7 +20,7 @@ public class Branch {
     @Column(name = "branch_address", nullable = false)
     private String branchAddress;
 
-    // branch manager
+   // branch manager
     @OneToOne
     @JoinColumn(name = "employee_id")
     private Employee employee;

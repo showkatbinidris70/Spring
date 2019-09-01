@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layout.html}">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
 
 <head>
     <meta charset="utf-8">
@@ -13,7 +12,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
     <title>Add NGO Branch</title>
 
-    <!--[endif]-->
+<!--[endif]-->
 
 
     <style type="text/css">
@@ -24,137 +23,133 @@
         .succes {
             color: green;
         }
-
-        .mm {
-            margin-left: 30px;
-        }
     </style>
 
 </head>
 
 <body>
 <div layout:fragment="custom-content">
-    <!-- ============================================================== -->
-    <!-- Bread crumb and right sidebar toggle -->
-    <!-- ============================================================== -->
-    <div class="page-breadcrumb">
-        <div class="row">
-            <div class="col-12 d-flex no-block align-items-center">
-                <h4 class="page-title">Add Branch</h4>
-                <div class="ml-auto text-right">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Library</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Bread crumb and right sidebar toggle -->
-    <!-- ============================================================== -->
+     <!-- ============================================================== -->
+     <!-- Bread crumb and right sidebar toggle -->
+     <!-- ============================================================== -->
+     <div class="page-breadcrumb">
+         <div class="row">
+             <div class="col-12 d-flex no-block align-items-center">
+                 <h4 class="page-title">Mahananda Rural Development Programs(NMS)</h4>
+                 <div class="ml-auto text-right">
+                     <nav aria-label="breadcrumb">
+                         <ol class="breadcrumb">
+                             <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                             <li class="breadcrumb-item active" aria-current="page">Library</li>
+                         </ol>
+                     </nav>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- ============================================================== -->
+     <!-- End Bread crumb and right sidebar toggle -->
+     <!-- ============================================================== -->
 
 
-    <!-- ============================================================== -->
-    <!-- Container fluid  -->
-    <!-- ============================================================== -->
-    <div class="container-fluid">
+     <!-- ============================================================== -->
+     <!-- Container fluid  -->
+     <!-- ============================================================== -->
+     <div class="container-fluid" >
 
 
-        <span th:class="succes" th:text="${successMsg}"></span>
 
-        <div class="row" th:class="mm">
-            <div class="col-lg-8 col-md-12 col-12 col-sm-12">
-                <div class="login-brand">
-                    Ngo Management System
-                </div>
+                <span th:class="succes" th:text="${successMsg}"></span>
+
+         <div class="row" th:class="mm">
+             <div class="col-lg-8 col-md-12 col-12 col-sm-12">
+                 <div class="login-brand">
+                     NGOs play a critical part in developing society, improving communities, and promoting citizen.
+
+                 </div>
 
 
-                <div class="card card-primary">
-                    <div class="card-header"><h4>Add New Branch</h4></div>
-                    <div class="card-body">
+                 <div class="card card-primary">
+                     <div class="card-header"><h4>Branch Details Form:</h4></div>
+                     <div class="card-body">
 
-                        <form action="#" th:object="${branch}" th:action="@{/branch/add}" th:method="POST"
-                              enctype="multipart/form-data">
+                         <form action="#" th:object="${branch}" th:action="@{/branch/add}" th:method="POST" enctype="multipart/form-data">
 
-                            <div class="row">
+                             <div class="row">
 
-                                <div class="row">
-                                    <!-- <div class="form-group col-12">
-                                         <label>Employee Name</label>
-                                         <select th:field="*{employee}" multiple required>
-                                             <option th:each="employee : ${employeeList}" th:value="${employee.id}">
-                                                 <span th:text="${employee.employeeName}"></span>
+                                 <div class="row">
+                                    <!--<div class="form-group col-12">-->
+                                         <!--<label>Employee Name</label>-->
+                                         <!--&lt;!&ndash;<select th:field="*{employee}" multiple required>&ndash;&gt;-->
+                                             <!--&lt;!&ndash;<option th:each="employee : ${employeeList}" th:value="${employee.id}">&ndash;&gt;-->
+                                                 <!--&lt;!&ndash;<span th:text="${employee.employeeName}"></span>&ndash;&gt;-->
+                                             <!--&lt;!&ndash;</option>&ndash;&gt;-->
+                                         <!--&lt;!&ndash;</select>&ndash;&gt;-->
+                                     <!--</div>-->
+
+
+                                     <div class="form-group col-12">
+                                         <label>NGO Name</label>
+                                         <select th:field="*{ngo}" multiple required>
+                                             <option th:each="ngo : ${ngoList}" th:value="${ngo.id}">
+                                                 <span th:text="${ngo.name}"></span>
                                              </option>
                                          </select>
-                                     </div>-->
+
+                                     </div>
+                                 </div>
+
+                                 <!--
+                                  this.branchName = branchName;
+                                  this.branchCode = branchCode;
+                                  this.branchAddress = branchAddress;-->
+
+                                 <div class="form-group col-12">
+                                     <label for="branchName">Branch Name</label>
+                                     <input id="branchName" type="text" th:field="*{branchName}" class="form-control" name="branchName" placeholder="Enter Branch Name"/>
+                                 </div>
 
 
-                                    <div class="form-group col-12">
-                                        <label>NGO Name</label>
-                                        <select th:field="*{ngo}" multiple required>
-                                            <option th:each="ngo : ${ngoList}" th:value="${ngo.id}">
-                                                <span th:text="${ngo.name}"></span>
-                                            </option>
-                                        </select>
-
-                                    </div>
-                                </div>
-
-                                <!--
-                                 this.branchName = branchName;
-                                 this.branchCode = branchCode;
-                                 this.branchAddress = branchAddress;-->
-
-                                <div class="form-group col-12">
-                                    <label for="branchName">Branch Name</label>
-                                    <input id="branchName" type="text" th:field="*{branchName}" class="form-control"
-                                           name="branchName" placeholder="Enter Branch Name"/>
-                                </div>
+                                 <div class="form-group col-12">
+                                     <label for="branchCode">Branch Code</label>
+                                     <input id="branchCode" type="text" th:field="*{branchCode}" class="form-control" name="branchCode" placeholder="Enter Branch Code"/>
+                                 </div>
 
 
-                                <div class="form-group col-12">
-                                    <label for="branchCode">Branch Code</label>
-                                    <input id="branchCode" type="text" th:field="*{branchCode}" class="form-control"
-                                           name="branchCode" placeholder="Enter Branch Code"/>
-                                </div>
+
+                                 <div class="form-group col-12">
+                                     <label for="branchAddress">Branch Address</label>
+                                     <input id="branchAddress" type="text" th:field="*{branchAddress}" class="form-control" name="branchAddress" placeholder="Enter Branch Address"/>
+                                 </div>
 
 
-                                <div class="form-group col-12">
-                                    <label for="branchAddress">Branch Address</label>
-                                    <input id="branchAddress" type="text" th:field="*{branchAddress}"
-                                           class="form-control" name="branchAddress"
-                                           placeholder="Enter Branch Address"/>
-                                </div>
+                             </div>
 
 
-                            </div>
+
+                             <div class="form-group">
+                                 <button type="submit" class="btn btn-primary btn-block">
+                                     Branch Registration
+                                 </button>
+                             </div>
 
 
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-primary btn-block">
-                                    Branch Registration
-                                </button>
-                            </div>
+
+                         </form>
+                     </div>
+                 </div>
+             </div>
+         </div>
 
 
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
+         <a th:href="@{/}">Home</a>
 
 
-        <a th:href="@{/}">Home</a>
-
-
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Container fluid  -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
+     </div>
+     <!-- ============================================================== -->
+     <!-- End Container fluid  -->
+     <!-- ============================================================== -->
+     <!-- ============================================================== -->
 </div>
 
 </body>

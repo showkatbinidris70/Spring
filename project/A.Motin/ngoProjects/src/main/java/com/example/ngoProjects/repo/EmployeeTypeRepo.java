@@ -10,6 +10,11 @@ import java.util.Optional;
 public interface EmployeeTypeRepo extends JpaRepository<EmployeeType, Long> {
 
     //finding by empType
-    Optional<EmployeeType> findByTypeName(String typeName);
+//Optional<EmployeeType> findByTypeName(String typeName);
+
+
+    EmployeeType findByTypeName(String typeName);
+    boolean existsEmployeeTypeByTypeName(String typeName);
+
 
 }

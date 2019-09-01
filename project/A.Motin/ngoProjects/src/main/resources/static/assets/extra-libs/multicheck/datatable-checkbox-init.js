@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
     //multicheckbox check for static table no padding
     $('#mainCheckbox').multicheck($('.listCheckbox'));
 
@@ -18,6 +18,7 @@ $(function () {
         var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(ga, s);
     })();*/
+
 
 
 });

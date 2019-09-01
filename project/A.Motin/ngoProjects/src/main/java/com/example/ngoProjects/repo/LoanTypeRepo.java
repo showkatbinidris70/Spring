@@ -6,4 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface LoanTypeRepo extends JpaRepository<LoanType, Long> {
+
+    //finding by typeName
+    LoanType findByTypeName(String typeName);
+    boolean existsLoanTypeByTypeName(String typeName);
 }

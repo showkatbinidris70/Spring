@@ -45,7 +45,9 @@ public class Nominee {
     private String nomineeRelation;
 
 
-    //Constructor
+
+
+ //Constructor
 
     public Nominee() {
     }
@@ -60,6 +62,7 @@ public class Nominee {
         this.nomineeNid = nomineeNid;
         this.nomineeRelation = nomineeRelation;
     }
+
 
 
     //Getter and Setter method

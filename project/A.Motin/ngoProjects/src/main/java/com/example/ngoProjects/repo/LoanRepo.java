@@ -6,4 +6,11 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface LoanRepo extends JpaRepository<Loan, Long> {
+
+    //  finding by loanCodeNumber
+
+
+    Loan findByLoanCodeNumber(String loanCodeNumber);
+
+    boolean existsByLoanCodeNumber(String loanCodeNumber);
 }

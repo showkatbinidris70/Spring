@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class CollectionType {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "type_name", nullable = false, unique = true)

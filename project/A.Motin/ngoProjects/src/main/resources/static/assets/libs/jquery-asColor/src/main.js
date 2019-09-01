@@ -5,24 +5,20 @@ import Converter from './converter';
 
 const OtherAsColor = $.asColor;
 
-const jQueryAsColor = function (...args
-)
-{
-    return new AsColor(...args
-)
-    ;
+const jQueryAsColor = function(...args) {
+  return new AsColor(...args);
 }
 
 $.asColor = jQueryAsColor;
 $.asColor.Constructor = AsColor;
 
 $.extend($.asColor, {
-    matchString: AsColor.matchString,
-    setDefaults: AsColor.setDefaults,
-    noConflict: function () {
-        $.asColor = OtherAsColor;
-        return jQueryAsColor;
-    }
+  matchString: AsColor.matchString,
+  setDefaults: AsColor.setDefaults,
+  noConflict: function() {
+    $.asColor = OtherAsColor;
+    return jQueryAsColor;
+  }
 }, Converter, info);
 
 export default $.asColor;

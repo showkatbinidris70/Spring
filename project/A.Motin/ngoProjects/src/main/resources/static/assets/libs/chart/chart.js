@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(document).ready(function() {
 
 
 
@@ -14,28 +14,24 @@ $(document).ready(function () {
     }
 
     // === Make chart === //
-    var plot = $.plot($(".chart"), [{data: sin, label: "sin(x)", color: "#ee7951"}, {
-        data: cos,
-        label: "cos(x)",
-        color: "#4fb9f0"
-    }], {
+    var plot = $.plot($(".chart"), [{ data: sin, label: "sin(x)", color: "#ee7951" }, { data: cos, label: "cos(x)", color: "#4fb9f0" }], {
         series: {
-            lines: {show: true},
-            points: {show: true}
+            lines: { show: true },
+            points: { show: true }
         },
-        grid: {hoverable: true, clickable: true},
-        yaxis: {min: -1.6, max: 1.6}
+        grid: { hoverable: true, clickable: true },
+        yaxis: { min: -1.6, max: 1.6 }
     });
 
     // === Point hover in chart === //
     var previousPoint = null;
-    $(".chart").bind("plothover", function (event, pos, item) {
+    $(".chart").bind("plothover", function(event, pos, item) {
 
         if (item) {
             if (previousPoint != item.dataIndex) {
                 previousPoint = item.dataIndex;
 
-                $('#tooltip').fadeOut(200, function () {
+                $('#tooltip').fadeOut(200, function() {
                     $(this).remove();
                 });
                 var x = item.datapoint[0].toFixed(2),
@@ -45,7 +41,7 @@ $(document).ready(function () {
             }
 
         } else {
-            $('#tooltip').fadeOut(200, function () {
+            $('#tooltip').fadeOut(200, function() {
                 $(this).remove();
             });
             previousPoint = null;

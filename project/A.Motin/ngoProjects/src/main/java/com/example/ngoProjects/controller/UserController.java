@@ -4,12 +4,14 @@ import com.example.ngoProjects.entity.User;
 import com.example.ngoProjects.repo.RoleRepo;
 import com.example.ngoProjects.repo.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.UUID;
 
 @Controller
 @RequestMapping(value = "/user/")
@@ -21,6 +23,9 @@ public class UserController {
     @Autowired
     private RoleRepo roleRepo;
 
+  @Autowired
+  private PasswordEncoder passwordEncoder;
+
 
     @GetMapping(value = "add")
     public String addUserView(Model model) {
@@ -30,24 +35,29 @@ public class UserController {
     }
 
 
-    @PostMapping(value = "add")
-    public String addUser(@Valid User user, BindingResult result, Model model) {
-        if (result.hasErrors()) {
-            return "user/add";
-        } else {
-            if (user != null) {
-                User user1 = this.userRepo.findByUsername(user.getUsername());
-                if (user1 != null) {
-                    model.addAttribute("existMsg", "UserName is already exist");
-                } else {
-                    this.userRepo.save(user);
-                    model.addAttribute("user", new User());
-                    model.addAttribute("successMsg", "Already Success");
-                }
-            }
-        }
-        return "user/add";
-    }
+  @PostMapping(value = "add")
+  public String addUser(@Valid User user, BindingResult result, Model model){
+      if(result.hasErrors()){
+          model.addAttribute("roleList", this.roleRepo.findAll());
+          return "user/add";
+      }else {
+          if (user != null){
+              User user1 = this.userRepo.findByUsername(user.getUsername());
+              if (user1 != null){
+                  model.addAttribute("existMsg", "UserName is already exist");
+              }else {
+                  user.setStatus(true);
+                 user.setPassword(passwordEncoder.encode(user.getPassword()));
+               user.setConformationToken(UUID.randomUUID().toString());
+                  this.userRepo.save(user);
+                  model.addAttribute("user", new User());
+                  model.addAttribute("roleList", this.roleRepo.findAll());
+                  model.addAttribute("successMsg", "Congratulation Data Insert Success");
+              }
+          }
+      }
+      return "user/add";
+  }
 
 
     @GetMapping(value = "/list")
@@ -55,6 +65,7 @@ public class UserController {
         model.addAttribute("list", this.userRepo.findAll());
         return "user/list";
     }
+
 
 
     @GetMapping(value = "/edit/{id}")
@@ -90,6 +101,7 @@ public class UserController {
         return "redirect:/list";
 
     }
+
 
 
 }

@@ -1,0 +1,102 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"-->
+      <!--layout:decorate="~{layout.html}">-->
+
+<!--<head>-->
+    <!--<meta charset="utf-8">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <!--&lt;!&ndash; Tell the browser to be responsive to screen width &ndash;&gt;-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--<meta name="description" content="">-->
+    <!--<meta name="author" content="">-->
+    <!--&lt;!&ndash; Favicon icon &ndash;&gt;-->
+    <!--<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">-->
+    <!--<title>NMS Template - The Ultimate Multipurpose admin template</title>-->
+
+    <!--<![endif]&ndash;&gt;-->
+
+    <!--<style type="text/css">-->
+        <!--.err {-->
+            <!--color: red;-->
+        <!--}-->
+
+        <!--.succes {-->
+            <!--color: green;-->
+        <!--}-->
+    <!--</style>-->
+
+
+<!--</head>-->
+
+<!--<body>-->
+<!--<div layout:fragment="custom-content">-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; Bread crumb and right sidebar toggle &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--<div class="page-breadcrumb">-->
+        <!--<div class="row">-->
+            <!--<div class="col-12 d-flex no-block align-items-center">-->
+                <!--<h4 class="page-title">Add Role</h4>-->
+                <!--<div class="ml-auto text-right">-->
+                    <!--<nav aria-label="breadcrumb">-->
+                        <!--<ol class="breadcrumb">-->
+                            <!--<li class="breadcrumb-item"><a href="#">Home</a></li>-->
+                            <!--<li class="breadcrumb-item active" aria-current="page">Library</li>-->
+                        <!--</ol>-->
+                    <!--</nav>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; End Bread crumb and right sidebar toggle &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+
+
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; Container fluid  &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--<div class="container-fluid">-->
+
+        <!--<div class="col-lg-8 col-md-12 col-12 col-sm-12">-->
+            <!--<div class="login-brand">-->
+                <!--Janata International Express-->
+            <!--</div>-->
+
+            <!--<div>-->
+                <!--<div class="card card-primary">-->
+                    <!--<div class="card-header"><h5>Edit Company Name</h5></div>-->
+                    <!--<div class="card-body">-->
+                        <!--<form th:object="${company}" action="#" th:action="@{/company/edit/} + ${id}" th:method="POST">-->
+                            <!--<input type="hidden" th:value="*{id}" th:action="${company.id}"/>-->
+                            <!--<div class="row">-->
+                                <!--<div class="form-group col-12">-->
+                                    <!--<label for="company_name">Company Name</label>-->
+                                    <!--<input id="company_name" type="text" class="form-control" th:field="*{companyName}"-->
+                                           <!--placeholder="Enter Company Name"/>-->
+
+                                <!--</div>-->
+                            <!--</div>-->
+                            <!--<div class="form-group">-->
+                                <!--<button class="btn btn-primary btn-block">-->
+                                    <!--Register-->
+                                <!--</button>-->
+                            <!--</div>-->
+                        <!--</form>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+
+        <!--<a th:href="@{/}">Home</a>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; End Container fluid  &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+<!--</div>-->
+
+<!--</body>-->
+
+<!--</html>-->

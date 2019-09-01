@@ -5,7 +5,7 @@
 // -->File: google_map_init
 /*************************************************************************************/
 
-$(function () {
+$(function() {
     //******************************************//
     // Basic Map
     //******************************************//
@@ -25,10 +25,10 @@ $(function () {
         zoom: 16,
         lat: -12.043333,
         lng: -77.028333,
-        click: function (e) {
+        click: function(e) {
             alert('click');
         },
-        dragend: function (e) {
+        dragend: function(e) {
             alert('dragend');
         }
     });
@@ -50,7 +50,7 @@ $(function () {
             database_id: 42,
             author: 'HPNeo'
         },
-        click: function (e) {
+        click: function(e) {
             if (console.log)
                 console.log(e);
             alert('You clicked in this marker');
@@ -73,7 +73,7 @@ $(function () {
         div: '#map_3',
         lat: -12.043333,
         lng: -77.028333,
-        click: function (e) {
+        click: function(e) {
             console.log(e);
         }
     });
@@ -149,15 +149,15 @@ $(function () {
         lat: -12.043333,
         lng: -77.028333
     });
-    $('#start_travel').click(function (e) {
+    $('#start_travel').click(function(e) {
         e.preventDefault();
         map_6.travelRoute({
             origin: [-12.044012922866312, -77.02470665341184],
             destination: [-12.090814532191756, -77.02271108990476],
             travelMode: 'driving',
-            step: function (e) {
+            step: function(e) {
                 $('#instructions').append('<li>' + e.instructions + '</li>');
-                $('#instructions li:eq(' + e.step_number + ')').delay(450 * e.step_number).fadeIn(200, function () {
+                $('#instructions li:eq(' + e.step_number + ')').delay(450 * e.step_number).fadeIn(200, function() {
                     map_6.setCenter(e.end_location.lat(), e.end_location.lng());
                     map_6.drawPolyline({
                         path: e.path,
@@ -192,7 +192,7 @@ $(function () {
         }
     });
     map_7.addMapType("osm", {
-        getTileUrl: function (coord, zoom) {
+        getTileUrl: function(coord, zoom) {
             return "https://a.tile.openstreetmap.org/" + zoom + "/" + coord.x + "/" + coord.y + ".png";
         },
         tileSize: new google.maps.Size(256, 256),
@@ -219,7 +219,7 @@ $(function () {
         },
         suppressInfoWindows: true,
         events: {
-            click: function (point) {
+            click: function(point) {
                 infoWindow.setContent('You clicked here!');
                 infoWindow.setPosition(point.latLng);
                 infoWindow.open(map_8.map_8);
@@ -242,7 +242,7 @@ $(function () {
         url: 'http://api.flickr.com/services/feeds/geo/?g=322338@N20&lang=en-us&format=feed-georss',
         suppressInfoWindows: true,
         events: {
-            click: function (point) {
+            click: function(point) {
                 infoWindow2.setContent(point.featureData.infoWindowHtml);
                 infoWindow2.setPosition(point.latLng);
                 infoWindow2.open(map_9.map_9);
@@ -283,7 +283,7 @@ $(function () {
         lng: -77.028333,
         draggable: true,
         fences: [polygon],
-        outside: function (m, f) {
+        outside: function(m, f) {
             alert('This marker has been moved outside of its fence');
         }
     });

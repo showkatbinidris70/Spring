@@ -28,6 +28,7 @@
     color: #2961ff;
 }
 
+
 .fc-widget-header {
     border: 0px !important;
 }
@@ -40,6 +41,7 @@
     border-bottom: none;
 }
 
+
 .fc-view {
     margin-top: 0px;
 }
@@ -48,6 +50,7 @@
     margin: 0px;
     padding: 24px 0px;
 }
+
 
 .fc-event {
     border-radius: 0px;

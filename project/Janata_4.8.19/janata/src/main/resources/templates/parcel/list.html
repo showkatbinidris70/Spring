@@ -1,0 +1,191 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"-->
+      <!--layout:decorate="~{layout.html}">-->
+
+<!--<head>-->
+    <!--<meta charset="utf-8">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <!--&lt;!&ndash; Tell the browser to be responsive to screen width &ndash;&gt;-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--<meta name="description" content="">-->
+    <!--<meta name="author" content="">-->
+    <!--&lt;!&ndash; Favicon icon &ndash;&gt;-->
+    <!--<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">-->
+    <!--<title>Janata International Express</title>-->
+
+    <!--<![endif]&ndash;&gt;-->
+    <!--&lt;!&ndash;-->
+        <!--<style type="text/css">-->
+            <!--table {-->
+                <!--width: 80%;-->
+                <!--margin: 0 auto;-->
+            <!--}-->
+        <!--</style>-->
+    <!--&ndash;&gt;-->
+
+    <!--<style>-->
+        <!--.mm {-->
+            <!--margin-left: 20px;-->
+            <!--margin-right: 20px;-->
+        <!--}-->
+
+        <!--#customers {-->
+            <!--font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;-->
+            <!--border-collapse: collapse;-->
+            <!--width: 100%;-->
+        <!--}-->
+
+        <!--#customers td, #customers th {-->
+            <!--border: 1px solid #ddd;-->
+            <!--padding: 8px;-->
+        <!--}-->
+
+        <!--#customers tr:nth-child(even) {-->
+            <!--background-color: #f2f2f2;-->
+        <!--}-->
+
+        <!--#customers tr:hover {-->
+            <!--background-color: #ddd;-->
+        <!--}-->
+
+        <!--#customers th {-->
+            <!--padding-top: 12px;-->
+            <!--padding-bottom: 12px;-->
+            <!--text-align: left;-->
+            <!--background-color: #999999;-->
+            <!--color: white;-->
+        <!--}-->
+    <!--</style>-->
+
+
+<!--</head>-->
+
+<!--<body>-->
+<!--<div layout:fragment="custom-content">-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; Bread crumb and right sidebar toggle &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--<div class="page-breadcrumb">-->
+        <!--<div class="row">-->
+            <!--<div class="col-12 d-flex no-block align-items-center">-->
+                <!--<h4 class="page-title">Employee List</h4>-->
+                <!--<div class="ml-auto text-right">-->
+                    <!--<nav aria-label="breadcrumb">-->
+                        <!--<ol class="breadcrumb">-->
+                            <!--<li class="breadcrumb-item"><a href="#">Home</a></li>-->
+                            <!--<li class="breadcrumb-item active" aria-current="page">Library</li>-->
+                        <!--</ol>-->
+                    <!--</nav>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; End Bread crumb and right sidebar toggle &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+
+
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; Container fluid  &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--<div class="container-fluid">-->
+
+
+        <!--<div class="container">-->
+            <!--<div class="row">-->
+                <!--<div class="col-10">-->
+                    <!--<h2>Employee List</h2>-->
+                <!--</div>-->
+                <!--<div class="col-2">-->
+                    <!--<a class="btn" th:href="@{/list}">Employee List</a>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<table id="customers">-->
+
+                <!--&lt;!&ndash;this.firstName = firstName;&ndash;&gt;-->
+                <!--&lt;!&ndash;this.lastName = lastName;&ndash;&gt;-->
+                <!--&lt;!&ndash;this.age = age;&ndash;&gt;-->
+
+                <!--&lt;!&ndash;this.joiningDate = joiningDate;&ndash;&gt;-->
+                <!--&lt;!&ndash;this.gender = gender;&ndash;&gt;-->
+                <!--&lt;!&ndash;this.birthDate = birthDate;&ndash;&gt;-->
+
+                <!--&lt;!&ndash;this.salary = salary;&ndash;&gt;-->
+                <!--&lt;!&ndash;this.bloodGroup = bloodGroup;&ndash;&gt;-->
+                <!--&lt;!&ndash;this.address = address;&ndash;&gt;-->
+
+                <!--&lt;!&ndash;this.contactNo = contactNo;&ndash;&gt;-->
+                <!--&lt;!&ndash;this.email = email;&ndash;&gt;-->
+
+
+
+                <!--&lt;!&ndash;this.branch = branch;&ndash;&gt;-->
+                <!--&lt;!&ndash;this.company = company;&ndash;&gt;-->
+                <!--&lt;!&ndash;this.user = user;&ndash;&gt;-->
+                <!--<tr>-->
+                    <!--<th>ID</th>-->
+                    <!--<th>firstName</th>-->
+                    <!--<th>lastName</th>-->
+                    <!--<th>age</th>-->
+
+                    <!--<th>joiningDate</th>-->
+                    <!--<th>gender</th>-->
+                    <!--<th>birthDate</th>-->
+
+                    <!--<th>salary</th>-->
+                    <!--<th>bloodGroup</th>-->
+                    <!--<th>address</th>-->
+
+                    <!--<th>contactNo</th>-->
+                    <!--<th>email</th>-->
+
+                    <!--<th>branch</th>-->
+                    <!--<th>company</th>-->
+                    <!--<th>user</th>-->
+
+                    <!--<th colspan="2">Action</th>-->
+                <!--</tr>-->
+
+                <!--<tr th:each="employee : ${list}">-->
+                    <!--<td th:text="${employee.id}"></td>-->
+                    <!--<td th:text="${employee.firstName}"></td>-->
+                    <!--<td th:text="${employee.lastName}"></td>-->
+                    <!--<td th:text="${employee.age}"></td>-->
+
+                    <!--<td th:text="${employee.joiningDate}"></td>-->
+                    <!--<td th:text="${employee.gender}"></td>-->
+                    <!--<td th:text="${employee.birthDate}"></td>-->
+
+                    <!--<td th:text="${employee.salary}"></td>-->
+                    <!--<td th:text="${employee.bloodGroup}"></td>-->
+                    <!--<td th:text="${employee.address}"></td>-->
+
+                    <!--<td th:text="${employee.contactNo}"></td>-->
+                    <!--<td th:text="${employee.email}"></td>-->
+
+                    <!--<td th:text="${employee.branch.branchName}"></td>-->
+                    <!--<td th:text="${employee.company.companyName}"></td>-->
+                    <!--<td th:text="${employee.user.username}"></td>-->
+
+
+
+                    <!--<td><a th:href="@{'/employee/edit/'+${employee.id}}">Edit</a></td>-->
+                    <!--<td><a th:href="@{'/employee/del/'+${employee.id}}">Delete</a></td>-->
+
+                <!--</tr>-->
+            <!--</table>-->
+
+
+        <!--</div>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; End Container fluid  &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+<!--</div>-->
+
+<!--</body>-->
+
+<!--</html>-->

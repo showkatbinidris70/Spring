@@ -26,15 +26,15 @@ public class NomineeController {
 
 
     @PostMapping(value = "add")
-    public String addNominee(@Valid Nominee nominee, BindingResult result, Model model) {
-        if (result.hasErrors()) {
+    public String addNominee(@Valid Nominee nominee, BindingResult result, Model model){
+        if(result.hasErrors()){
             return "nominee/add";
-        } else {
-            if (nominee != null) {
+        }else {
+            if (nominee != null){
                 Nominee nominee1 = this.repo.findByNomineeName(nominee.getNomineeName());
-                if (nominee1 != null) {
+                if (nominee1 != null){
                     model.addAttribute("existMsg", "NomineeName is already exist");
-                } else {
+                }else {
                     this.repo.save(nominee);
                     model.addAttribute("nominee", new Nominee());
                     model.addAttribute("successMsg", "Already Success");
@@ -50,6 +50,7 @@ public class NomineeController {
         model.addAttribute("list", this.repo.findAll());
         return "nominee/list";
     }
+
 
 
     @GetMapping(value = "/edit/{id}")
@@ -85,6 +86,8 @@ public class NomineeController {
         return "redirect:/list";
 
     }
+
+
 
 
 }

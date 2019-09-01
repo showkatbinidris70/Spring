@@ -1,5 +1,6 @@
 package com.example.ngoProjects.controller;
 
+
 import com.example.ngoProjects.entity.EmployeeType;
 import com.example.ngoProjects.repo.EmployeeTypeRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,13 +10,13 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.util.Optional;
 
 @Controller
 @RequestMapping(value = "/empType/")
 public class EmployeeTypeController {
+
     @Autowired
-    private EmployeeTypeRepo repo;
+    private EmployeeTypeRepo employeeTypeRepo;
 
     @GetMapping(value = "add")
     public String addEmployeeTypeView(Model model) {
@@ -29,36 +30,29 @@ public class EmployeeTypeController {
         if (result.hasErrors()) {
             return "empType/add";
         } else {
-
-            try {
-                Optional<EmployeeType> employeeType1 = this.repo.findByTypeName(employeeType.getTypeName());
-                if (employeeType1.isPresent()) {
-                    model.addAttribute("existMsg", "TypeName is already exist");
+            if (employeeType != null) {
+                EmployeeType employeeType1 = this.employeeTypeRepo.findByTypeName(employeeType.getTypeName());
+                if (employeeType1 != null) {
+                    model.addAttribute("existMsg", "EmployeeTypeName is already exist");
                 } else {
-                    this.repo.save(employeeType);
+                    this.employeeTypeRepo.save(employeeType);
                     model.addAttribute("employeeType", new EmployeeType());
-                    model.addAttribute("successMsg", "Alread Success");
+                    model.addAttribute("successMsg", "Data insert is Success");
                 }
-            } catch (NullPointerException ne) {
-                this.repo.save(employeeType);
-                model.addAttribute("employeeType", new EmployeeType());
-                model.addAttribute("successMsg", "Alread Success");
             }
-
-
         }
         return "empType/add";
     }
 
     @GetMapping(value = "/list")
     public String employeeTypeList(Model model) {
-        model.addAttribute("list", this.repo.findAll());
+        model.addAttribute("list", this.employeeTypeRepo.findAll());
         return "empType/list";
     }
 
     @GetMapping(value = "/edit/{id}")
     public String editEmployeeTypeView(@PathVariable("id") Long id, Model model) {
-        model.addAttribute("employeeType", this.repo.getOne(id));
+        model.addAttribute("employeeType", this.employeeTypeRepo.getOne(id));
         return "empType/edit";
 
     }
@@ -69,14 +63,14 @@ public class EmployeeTypeController {
             return "empType/edit";
         } else {
             if (employeeType != null) {
-
-                if (this.repo.findByTypeName(employeeType.getTypeName()).isPresent()) {
-                    model.addAttribute("existMsg", "TypeName is already exist");
+                EmployeeType employeeType1 = this.employeeTypeRepo.findByTypeName(employeeType.getTypeName());
+                if (employeeType1 != null) {
+                    model.addAttribute("existMsg", "EmployeeTypeName is already exist");
                     return "empType/edit";
                 } else {
-                    this.repo.save(employeeType);
+                    this.employeeTypeRepo.save(employeeType);
                     model.addAttribute("employeeType", new EmployeeType());
-                    model.addAttribute("successMsg", "Alread Success");
+                    model.addAttribute("successMsg", "Data Update is Success");
                 }
             }
         }
@@ -85,7 +79,7 @@ public class EmployeeTypeController {
 
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     public String delEmployeeType(@PathVariable("id") Long id) {
-        this.repo.deleteById(id);
+        this.employeeTypeRepo.deleteById(id);
         return "redirect:/list";
 
     }

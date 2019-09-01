@@ -21,32 +21,30 @@ public class Branch {
     @Column(name = "branch_address", nullable = false)
     private String branchAddress;
 
-    //RelationShip
-    // branch manager
-    @OneToOne
-    @JoinColumn(name = "employee_id")
-    private Employee employee;
+
 
     @ManyToOne
     @JoinColumn(name = "ngo_id")
     private Ngo ngo;
 
 
-    //Constructor
+
+   //Constructor
 
     public Branch() {
     }
 
-    public Branch(String branchName, String branchCode, String branchAddress, Employee employee, Ngo ngo) {
+    public Branch(String branchName, String branchCode, String branchAddress, Ngo ngo) {
         this.branchName = branchName;
         this.branchCode = branchCode;
         this.branchAddress = branchAddress;
-        this.employee = employee;
         this.ngo = ngo;
     }
 
 
-    //Getter and Setter method
+
+
+//Getter and Setter method
 
     public Long getId() {
         return id;
@@ -80,14 +78,6 @@ public class Branch {
         this.branchAddress = branchAddress;
     }
 
-    public Employee getEmployee() {
-        return employee;
-    }
-
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
-    }
-
     public Ngo getNgo() {
         return ngo;
     }
@@ -108,13 +98,12 @@ public class Branch {
                 Objects.equals(getBranchName(), branch.getBranchName()) &&
                 Objects.equals(getBranchCode(), branch.getBranchCode()) &&
                 Objects.equals(getBranchAddress(), branch.getBranchAddress()) &&
-                Objects.equals(getEmployee(), branch.getEmployee()) &&
                 Objects.equals(getNgo(), branch.getNgo());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getBranchName(), getBranchCode(), getBranchAddress(), getEmployee(), getNgo());
+        return Objects.hash(getId(), getBranchName(), getBranchCode(), getBranchAddress(), getNgo());
     }
 
 
@@ -127,7 +116,6 @@ public class Branch {
                 ", branchName='" + branchName + '\'' +
                 ", branchCode='" + branchCode + '\'' +
                 ", branchAddress='" + branchAddress + '\'' +
-                ", employee=" + employee +
                 ", ngo=" + ngo +
                 '}';
     }

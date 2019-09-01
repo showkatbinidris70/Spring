@@ -60,6 +60,7 @@ public class Employee {
     private User user;
 
 
+
     //Constructor
 
     public Employee() {
@@ -80,6 +81,7 @@ public class Employee {
         this.employeeType = employeeType;
         this.user = user;
     }
+
 
 
 //Getter and Setter method
@@ -195,6 +197,9 @@ public class Employee {
     public void setUser(User user) {
         this.user = user;
     }
+
+
+
 
 
     //Equals and HashCode method

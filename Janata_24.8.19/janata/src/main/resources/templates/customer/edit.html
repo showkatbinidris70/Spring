@@ -1,0 +1,177 @@
+<!--<!DOCTYPE html>-->
+<!--<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"-->
+      <!--layout:decorate="~{layout.html}">-->
+
+<!--<head>-->
+    <!--<meta charset="utf-8">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+    <!--&lt;!&ndash; Tell the browser to be responsive to screen width &ndash;&gt;-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <!--<meta name="description" content="">-->
+    <!--<meta name="author" content="">-->
+    <!--&lt;!&ndash; Favicon icon &ndash;&gt;-->
+    <!--<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">-->
+    <!--<title>Janata International Express</title>-->
+
+    <!--<![endif]&ndash;&gt;-->
+
+    <!--<style type="text/css">-->
+        <!--.err {-->
+            <!--color: red;-->
+        <!--}-->
+
+        <!--.succes {-->
+            <!--color: green;-->
+        <!--}-->
+    <!--</style>-->
+
+
+<!--</head>-->
+
+<!--<body>-->
+<!--<div layout:fragment="custom-content">-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; Bread crumb and right sidebar toggle &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--<div class="page-breadcrumb">-->
+        <!--<div class="row">-->
+            <!--<div class="col-12 d-flex no-block align-items-center">-->
+                <!--<h4 class="page-title">Add Customer</h4>-->
+                <!--<div class="ml-auto text-right">-->
+                    <!--<nav aria-label="breadcrumb">-->
+                        <!--<ol class="breadcrumb">-->
+                            <!--<li class="breadcrumb-item"><a href="#">Home</a></li>-->
+                            <!--<li class="breadcrumb-item active" aria-current="page">Library</li>-->
+                        <!--</ol>-->
+                    <!--</nav>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; End Bread crumb and right sidebar toggle &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+
+
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; Container fluid  &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--<div class="container-fluid">-->
+
+
+        <!--<div class="row" th:class="mm">-->
+            <!--<div class="col-lg-8 col-md-12 col-12 col-sm-12">-->
+                <!--<div class="login-brand">-->
+                   <!--Janata International Express-->
+                <!--</div>-->
+
+
+                <!--<div class="card card-primary">-->
+                    <!--<div class="card-header"><h4>Add New Customer</h4></div>-->
+                    <!--<div class="card-body">-->
+
+                        <!--<form action="#" th:object="${customer}" th:action="@{/customer/add}" th:method="POST"-->
+                              <!--enctype="multipart/form-data">-->
+
+                            <!--<div class="row">-->
+
+                                <!--<div class="row">-->
+                                    <!--<div class="form-group col-12">-->
+                                        <!--<label>Customer Name</label>-->
+                                        <!--<select th:field="*{company}" multiple required>-->
+                                            <!--<option th:each="customer : ${customer}" th:value="${customer.id}">-->
+                                                <!--<span th:text="${customer.customerName}"></span>-->
+                                            <!--</option>-->
+                                        <!--</select>-->
+
+                                    <!--</div>-->
+                                <!--</div>-->
+
+
+                                <!--<div class="form-group col-12">-->
+                                    <!--<label for="customerName">Customer Name</label>-->
+                                    <!--<input id="customerName" type="text" th:field="*{customerName}" class="form-control"-->
+                                           <!--name="customerName">-->
+                                <!--</div>-->
+
+                                <!--<div class="form-group col-12">-->
+                                    <!--<label for="bookingDate">Booking Date</label>-->
+                                    <!--<input id="bookingDate" type="date" th:field="*{bookingDate}" class="form-control"-->
+                                           <!--name="bookingDate">-->
+                                <!--</div>-->
+                                <!--<div class="form-group col-12">-->
+                                    <!--<label for="deliveryDate">Delivery Date</label>-->
+                                    <!--<input id="deliveryDate" type="date" th:field="*{deliveryDate}" class="form-control"-->
+                                           <!--name="deliveryDate">-->
+                                <!--</div>-->
+                                <!--<div class="form-group col-12">-->
+                                    <!--<label for="country">country Name</label>-->
+                                    <!--<input id="country" type="text" th:field="*{country}" class="form-control"-->
+                                           <!--name="country">-->
+                                <!--</div>-->
+
+
+                                <!--<div class="form-group col-12">-->
+                                    <!--<label for="state">State</label>-->
+                                    <!--<input id="state" type="text" th:field="*{state}" class="form-control"-->
+                                           <!--name="state">-->
+                                <!--</div>-->
+
+
+                                <!--<div class="form-group col-12">-->
+                                    <!--<label for="district">District</label>-->
+                                    <!--<input id="district" type="text" th:field="*{district}" class="form-control" name="district">-->
+                                <!--</div>-->
+
+                                <!--<div class="form-group col-12">-->
+                                    <!--<label for="address">Address</label>-->
+                                    <!--<input id="address" type="text" th:field="*{address}" class="form-control"-->
+                                           <!--name="address">-->
+                                <!--</div>-->
+
+                                <!--<div class="form-group col-12">-->
+                                    <!--<label for="contactNo">ContactNo</label>-->
+                                    <!--<input id="contactNo" type="text" th:field="*{contactNo}" class="form-control"-->
+                                           <!--name="contactNo">-->
+                                <!--</div>-->
+
+                                <!--<div class="form-group col-12">-->
+                                    <!--<label for="email">Email</label>-->
+                                    <!--<input id="email" type="text" th:field="*{email}" class="form-control" name="email">-->
+                                <!--</div>-->
+                                <!--<div class="form-group col-12">-->
+                                    <!--<label for="company">Company</label>-->
+                                    <!--<input id="company" type="text" th:field="*{company}" class="form-control" name="company">-->
+                                <!--</div>-->
+
+                            <!--</div>-->
+
+
+                            <!--<div class="form-group">-->
+                                <!--<button type="submit" class="btn btn-primary btn-block">-->
+                                    <!--User Registration-->
+                                <!--</button>-->
+                            <!--</div>-->
+
+
+                        <!--</form>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+
+
+        <!--</div>-->
+
+
+        <!--<a th:href="@{/}">Home</a>-->
+
+    <!--</div>-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; End Container fluid  &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+    <!--&lt;!&ndash; ============================================================== &ndash;&gt;-->
+<!--</div>-->
+
+<!--</body>-->
+
+<!--</html>-->

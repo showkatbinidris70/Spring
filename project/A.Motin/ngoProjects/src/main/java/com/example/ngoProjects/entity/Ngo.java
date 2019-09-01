@@ -38,6 +38,8 @@ public class Ngo {
     private String ngoService;
 
 
+
+
     //Constructor
     public Ngo() {
     }
@@ -120,6 +122,8 @@ public class Ngo {
     }
 
 
+
+
     //Equals and hashCode method
 
 
@@ -142,6 +146,7 @@ public class Ngo {
     public int hashCode() {
         return Objects.hash(getId(), getName(), getOwnersName(), getNgoRegiDate(), getAddress(), getMobile(), getEmail(), getNgoService());
     }
+
 
 
     //toString

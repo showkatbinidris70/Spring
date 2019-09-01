@@ -52,4 +52,4 @@ public class Employee {
     @ManyToOne
     @JoinColumn(name = "emp_type_id", nullable = false)
     private EmployeeType employeeType;
-}
+    }

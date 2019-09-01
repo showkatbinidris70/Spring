@@ -4,7 +4,7 @@ Author: Wrappixel
 Email: niravjoshi87@gmail.com
 File: js
 */
-$(function () {
+$(function() {
     "use strict";
     // ============================================================== 
     // Newsletter
@@ -39,7 +39,7 @@ $(function () {
     // Offset x1 a tiny amount so that the straight stroke gets a bounding box
     // Straight lines don't get a bounding box 
     // Last remark on -> http://www.w3.org/TR/SVG11/coords.html#ObjectBoundingBox
-    chart.on('draw', function (ctx) {
+    chart.on('draw', function(ctx) {
         if (ctx.type === 'area') {
             ctx.element.attr({
                 x1: ctx.x1 + 0.001
@@ -48,7 +48,7 @@ $(function () {
     });
 
     // Create the gradient definition on created event (always after chart re-render)
-    chart.on('created', function (ctx) {
+    chart.on('created', function(ctx) {
         var defs = ctx.svg.elem('defs');
         defs.elem('linearGradient', {
             id: 'gradient',
@@ -72,7 +72,7 @@ $(function () {
     // ============================================================== 
     // Our Visitor
     // ============================================================== 
-    var sparklineLogin = function () {
+    var sparklineLogin = function() {
         $('#ravenue').sparkline([6, 10, 9, 11, 9, 10, 12], {
             type: 'bar',
             height: '100',
@@ -95,16 +95,17 @@ $(function () {
     };
     var sparkResize;
 
-    $(window).resize(function (e) {
+    $(window).resize(function(e) {
         clearTimeout(sparkResize);
         sparkResize = setTimeout(sparklineLogin, 500);
     });
     sparklineLogin();
 
 
+
     // This is for the chat messege on enter
-    $(function () {
-        $(document).on('keypress', "#textarea1", function (e) {
+    $(function() {
+        $(document).on('keypress', "#textarea1", function(e) {
             if (e.keyCode == 13) {
                 var id = $(this).attr("data-user-id");
                 var msg = $(this).val();

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layout.html}">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate="~{layout.html}">
 
 <head>
     <meta charset="utf-8">
@@ -13,7 +12,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
     <title>NMS Template - The Ultimate Multipurpose admin template</title>
 
-    <!--[endif]-->
+<!--[endif]-->
 
 
     <style type="text/css">
@@ -30,70 +29,73 @@
 
 <body>
 <div layout:fragment="custom-content">
-    <!-- ============================================================== -->
-    <!-- Bread crumb and right sidebar toggle -->
-    <!-- ============================================================== -->
-    <div class="page-breadcrumb">
-        <div class="row">
-            <div class="col-12 d-flex no-block align-items-center">
-                <h4 class="page-title">Add EmployeeType</h4>
-                <div class="ml-auto text-right">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Library</li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Bread crumb and right sidebar toggle -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- Container fluid  -->
-    <!-- ============================================================== -->
-    <div class="container-fluid">
+     <!-- ============================================================== -->
+     <!-- Bread crumb and right sidebar toggle -->
+     <!-- ============================================================== -->
+     <div class="page-breadcrumb">
+         <div class="row">
+             <div class="col-12 d-flex no-block align-items-center">
+                 <h4 class="page-title">Mahananda Rural Development Program(NMS)</h4>
+                 <div class="ml-auto text-right">
+                     <nav aria-label="breadcrumb">
+                         <ol class="breadcrumb">
+                             <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                             <li class="breadcrumb-item active" aria-current="page">Library</li>
+                         </ol>
+                     </nav>
+                 </div>
+             </div>
+         </div>
+     </div>
+     <!-- ============================================================== -->
+     <!-- End Bread crumb and right sidebar toggle -->
+     <!-- ============================================================== -->
+     <!-- ============================================================== -->
+     <!-- Container fluid  -->
+     <!-- ============================================================== -->
+     <div class="container-fluid" >
 
-        <span th:class="succes" th:text="${successMsg}"></span>
+         <span th:class="succes" th:text="${successMsg}"></span>
 
-        <div class="col-lg-8 col-md-12 col-12 col-sm-12">
-            <div class="login-brand">
-                Ngo System
-            </div>
-            <div>
+         <div class="col-lg-8 col-md-12 col-12 col-sm-12">
+             <div class="login-brand">
+                 NGOs play a critical part in developing society, improving communities, and promoting citizen.
 
-                <div class="card card-primary">
-                    <div class="card-header"><h5>Add EmployeeType</h5></div>
-                    <div class="card-body">
-                        <form th:object="${employeeType}" th:action="@{/empType/add}" th:method="POST">
-                            <div class="row">
-                                <div class="form-group col-12">
-                                    <label for="role_name">Type Name</label>
-                                    <input id="role_name" type="text" class="form-control" th:field="*{typeName}"
-                                           placeholder="Enter Type Name"/>
-                                </div>
-                            </div>
+             </div>
+             <div>
+
+                 <div class="card card-primary">
+                     <div class="card-header"><h5>EmployeeType Details Form:</h5></div>
+                     <div class="card-body">
+                         <form th:object="${employeeType}" th:action="@{/empType/add}" th:method="POST">
+                             <div class="row">
+                                 <div class="form-group col-12">
+                                     <label for="type_name">Type Name</label>
+                                     <input id="type_name" type="text" class="form-control" th:field="*{typeName}"
+                                            placeholder="Enter Type Name"/>
+                                 </div>
+                             </div>
 
 
-                            <div class="form-group">
-                                <button class="btn btn-primary btn-block">
-                                    Register
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+                             <div class="form-group">
+                                 <button class="btn btn-primary btn-block">
+                                     Register EmpLoyeeTypes
+                                 </button>
+                             </div>
+                         </form>
+                     </div>
+                 </div>
+             </div>
 
-        </div>
+         </div>
 
-    </div>
-    <!-- ============================================================== -->
-    <!-- End Container fluid  -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
+         <a th:href="@{/}">Home</a>
+
+     </div>
+     <!-- ============================================================== -->
+     <!-- End Container fluid  -->
+     <!-- ============================================================== -->
+     <!-- ============================================================== -->
 </div>
 
 </body>

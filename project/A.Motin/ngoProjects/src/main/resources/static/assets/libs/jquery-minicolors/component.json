@@ -3,10 +3,7 @@
   "version": "2.2.6",
   "description": "jQuery MiniColors Plugin",
   "homepage": "",
-  "main": [
-    "./jquery.minicolors.js",
-    "./jquery.minicolors.css"
-  ],
+  "main": [ "./jquery.minicolors.js", "./jquery.minicolors.css" ],
   "dependencies": {
     "jquery": ">= 1.7.x"
   },
