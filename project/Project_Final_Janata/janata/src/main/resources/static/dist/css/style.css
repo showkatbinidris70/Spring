@@ -65,6 +65,7 @@ File: scss
  *  12. Forms
  *  14. Component
  */
+
 body[data-theme="dark"] {
     /* Card Color */
     /* Settings for the  element */
@@ -20085,3 +20086,4 @@ File: scss
         display: block !important;
     }
 }
+
