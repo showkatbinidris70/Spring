@@ -13,6 +13,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
     <title>Janata International Express</title>
 
+    <![endif]-->
+    <!--
+        <style type="text/css">
+            table {
+                width: 80%;
+                margin: 0 auto;
+            }
+        </style>
+    -->
+
     <style>
         .mm {
             margin-left: 20px;
@@ -58,7 +68,7 @@
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-12 d-flex no-block align-items-center">
-                <h4 class="page-title">Document List</h4>
+                <h2 class="page-title">Janata International Express</h2>
                 <div class="ml-auto text-right">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -70,18 +80,24 @@
             </div>
         </div>
     </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
 
 
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
     <div class="container-fluid">
 
 
         <div class="container">
             <div class="row">
                 <div class="col-10">
-                    <h2>Document List</h2>
+                    <h4>Document List</h4>
                 </div>
                 <div class="col-2">
-                    <a class="btn" th:href="@{/documentlist}">Document List</a>
+                    <a class="btn" th:href="@{/list}">Document List</a>
                 </div>
             </div>
 
@@ -91,24 +107,25 @@
 
                 <tr>
                     <th>ID</th>
-                    <th>parcelName</th>
-                    <th>weight</th>
-                    <th>height</th>
-                    <th>length</th>
+                    <th>Parcel Name</th>
+                    <th>Weight</th>
+                    <th>Height</th>
+                    <th>Length</th>
 
-                    <th>sendFrom</th>
-                    <th>receivedTo</th>
-                    <th>cost</th>
+                    <th>Send From</th>
+                    <th>Received To</th>
+                    <th>Cost</th>
 
-                    <th>productType</th>
-                    <th>sendCountry</th>
-                    <th>sendState</th>
+                    <th>Product Type</th>
 
-                    <th>deliveryDate</th>
-                    <th>bookingDate</th>
+                    <th>Delivery Date</th>
+                    <th>Booking Date</th>
+
+                    <th>Branch Name</th>
+                    <th>Company Name</th>
+                    <th>Reciever Name</th>
 
 
-                    <th colspan="2">Action</th>
                 </tr>
 
                 <tr th:each="parcel : ${list}">
@@ -123,8 +140,6 @@
                     <td th:text="${parcel.cost}"></td>
 
                     <td th:text="${parcel.productType}"></td>
-                    <td th:text="${parcel.sendCountry}"></td>
-                    <td th:text="${parcel.sendState}"></td>
 
                     <td th:text="${parcel.deliveryDate}"></td>
                     <td th:text="${parcel.bookingDate}"></td>
@@ -134,23 +149,18 @@
                     <td th:text="${parcel.shippingDetails.recieverName}"></td>
 
 
-
-                    <td><a th:href="@{'/parcel/edit/'+${parcel.id}}">Edit</a></td>
-                    <td><a th:href="@{'/parcel/del/'+${parcel.id}}">Delete</a></td>
-
                 </tr>
             </table>
 
             </div>
         </div>
-        <div class="container">
-            <a class="btn btn-primary pull-right" th:href="@{/customer/list}" type="submit">back</a>
-            <a class="btn btn-primary pull-right" th:href="@{/packing/list}" type="submit">Next</a>
-        </div>
+
 
     </div>
-
-
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
 </div>
 
 </body>

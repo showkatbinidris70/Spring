@@ -96,14 +96,14 @@
                                         <!--</select>-->
                                     </div>
                                     <!--Branch -->
-                                    <div class="form-group col-12">
-                                        <label>Receiving Branch Name</label>
-                                        <select th:field="*{sendingBranch}" multiple required>
-                                            <option th:each="branch : ${branchList}" th:value="${branch.id}">
-                                                <span th:text="${branch.branchName}"></span>
-                                            </option>
-                                        </select>
-                                    </div>
+                                    <!--<div class="form-group col-12">-->
+                                        <!--<label>Receiving Branch Name</label>-->
+                                        <!--<select th:field="*{sendingBranch}" multiple required>-->
+                                            <!--<option th:each="branch : ${branchList}" th:value="${branch.id}">-->
+                                                <!--<span th:text="${branch.branchName}"></span>-->
+                                            <!--</option>-->
+                                        <!--</select>-->
+                                    <!--</div>-->
 
                                     <!--Company-->
                                     <div class="form-group col-12">
@@ -141,12 +141,12 @@
                                 <div class="form-group col-12">
                                     <label for="receiverName">Receiver Name</label>
                                     <input id="receiverName" type="text" th:field="*{receiverName}" class="form-control"
-                                           name="receiverName">
+                                           name="receiverName" placeholder="Enter receiver name">
                                 </div>
 
 
                                 <div class="form-group col-12">
-                                    <label for="receivingDate">receivingDate</label>
+                                    <label for="receivingDate">Receiving Date</label>
                                     <input id="receivingDate" type="date" th:field="*{receivingDate}" class="form-control"
                                            name="receivingDate">
                                 </div>
@@ -158,7 +158,7 @@
 
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-block">
-                                    Receiver Registration
+                                 Save
                                 </button>
                             </div>
 

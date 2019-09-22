@@ -26,7 +26,7 @@
         }
 
         #customers td, #customers th {
-            border: 1px solid #80172a;
+            border: 1px solid #ddd;
             padding: 8px;
         }
 
@@ -101,7 +101,7 @@
                                         <th>sendingDate</th>
 
                                         <th>sendingbranchName</th>
-                                        <th>dest_b_Name</th>
+                                        <!--<th>dest_b_Name</th>-->
                                         <th>employee</th>
                                         <th>packingsParcels</th>
 
@@ -114,7 +114,7 @@
                                         <td th:text="${senderDetails.sendingDate}"></td>
 
                                         <td th:text="${senderDetails.sendingbranch.branchName}"></td>
-                                        <td th:text="${senderDetails.destinationbranch.branchName}"></td>
+                                        <!--<td th:text="${senderDetails.destinationbranch.branchName}"></td>-->
                                         <td th:text="${senderDetails.employee.firstName}"></td>
                                         <!--<td th:text="${senderDetails.packings}"></td>-->
 

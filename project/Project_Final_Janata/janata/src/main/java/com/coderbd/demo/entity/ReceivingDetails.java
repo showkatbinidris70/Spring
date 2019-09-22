@@ -21,9 +21,14 @@ public class ReceivingDetails {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date receivingDate;
 
-    @ManyToOne
-    @JoinColumn(name = "sendingbranch_id")
-    private Branch sendingBranch;
+
+
+//    @ManyToOne
+//    @JoinColumn(name = "sendingbranch_id")
+//    private Branch sendingBranch;
+
+
+
 
     @ManyToOne
     @JoinColumn(name = "destinationbranch_id")
@@ -44,10 +49,9 @@ public class ReceivingDetails {
     public ReceivingDetails() {
     }
 
-    public ReceivingDetails(String receiverName, Date receivingDate, Branch sendingBranch, Branch receivingBranch, Employee employee, Set<Packing> packings) {
+    public ReceivingDetails(String receiverName, Date receivingDate, Branch receivingBranch, Employee employee, Set<Packing> packings) {
         this.receiverName = receiverName;
         this.receivingDate = receivingDate;
-        this.sendingBranch = sendingBranch;
         this.receivingBranch = receivingBranch;
         this.employee = employee;
         this.packings = packings;
@@ -75,14 +79,6 @@ public class ReceivingDetails {
 
     public void setReceivingDate(Date receivingDate) {
         this.receivingDate = receivingDate;
-    }
-
-    public Branch getSendingBranch() {
-        return sendingBranch;
-    }
-
-    public void setSendingBranch(Branch sendingBranch) {
-        this.sendingBranch = sendingBranch;
     }
 
     public Branch getReceivingBranch() {
@@ -117,7 +113,6 @@ public class ReceivingDetails {
         return Objects.equals(getId(), that.getId()) &&
                 Objects.equals(getReceiverName(), that.getReceiverName()) &&
                 Objects.equals(getReceivingDate(), that.getReceivingDate()) &&
-                Objects.equals(getSendingBranch(), that.getSendingBranch()) &&
                 Objects.equals(getReceivingBranch(), that.getReceivingBranch()) &&
                 Objects.equals(getEmployee(), that.getEmployee()) &&
                 Objects.equals(getPackings(), that.getPackings());
@@ -125,7 +120,7 @@ public class ReceivingDetails {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getReceiverName(), getReceivingDate(), getSendingBranch(), getReceivingBranch(), getEmployee(), getPackings());
+        return Objects.hash(getId(), getReceiverName(), getReceivingDate(), getReceivingBranch(), getEmployee(), getPackings());
     }
 
     @Override
@@ -134,7 +129,6 @@ public class ReceivingDetails {
                 "id=" + id +
                 ", receiverName='" + receiverName + '\'' +
                 ", receivingDate=" + receivingDate +
-                ", sendingBranch=" + sendingBranch +
                 ", receivingBranch=" + receivingBranch +
                 ", employee=" + employee +
                 ", packings=" + packings +

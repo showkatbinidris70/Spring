@@ -78,15 +78,6 @@
 
                             <div class="row">
 
-
-
-                                <!--this.parcelName = parcelName;-->
-                                <!--this.weight = weight;-->
-                                <!--this.height = height;-->
-                                <!--this.length = length;-->
-
-
-
                                 <div class="form-group col-12">
                                     <label for="parcelName">parcelName</label>
                                     <input id="parcelName" type="text" th:field="*{parcelName}" class="form-control"
@@ -114,9 +105,6 @@
                                            name="length">
                                 </div>
 
-                                <!--this.sendFrom = sendFrom;-->
-                                <!--this.receivedTo = receivedTo;-->
-                                <!--this.cost = cost;-->
 
                                 <div class="form-group col-12">
                                     <label for="sendFrom">sendFrom</label>
@@ -133,56 +121,27 @@
 
 
                                 <div class="form-group col-12">
+                                    <label>productType</label>
+                                    <input id="Mgende" type="radio" th:field="*{productType}" th:value="parcel"
+                                           class="form-control" name="productType">Parcel
+                                    <input id="Fgende" type="radio" th:field="*{productType}" th:value="document"
+                                           class="form-control" name="productType">Document
+                                </div>
+
+
+                                <div class="form-group col-12">
+                                    <label>DeliveryType</label>
+                                    <input id="Mgender" type="radio" th:field="*{deliveryType}" th:value="cash"
+                                           class="form-control" name="deliveryType">Cash
+                                    <input id="Fgender" type="radio" th:field="*{deliveryType}" th:value="cradit"
+                                           class="form-control" name="deliveryType">Cradit
+                                </div>
+
+                                <div class="form-group col-12">
                                     <label for="cost">cost</label>
                                     <input id="cost" type="text" th:field="*{cost}" class="form-control"
                                            name="cost">
                                 </div>
-
-
-                                <!--this.productType = productType;-->
-                                <!--this.sendCountry = sendCountry;-->
-
-
-                                <!--<div class="form-group col-12">-->
-                                <!--<label for="productType">productType</label>-->
-                                <!--<input id="productType" type="text" th:field="*{productType}" class="form-control"-->
-                                <!--name="productType">-->
-                                <!--</div>-->
-
-                                <div class="form-group col-12">
-                                    <label>productType</label>
-                                    <input id="Mgender" type="radio" th:field="*{productType}" th:value="parcel"
-                                           class="form-control" name="productType">Parcel
-                                    <input id="Fgender" type="radio" th:field="*{productType}" th:value="document"
-                                           class="form-control" name="productType">Document
-                                </div>
-
-                                <div class="form-group col-12">
-                                    <label for="sendCountry">sendCountry</label>
-                                    <input id="sendCountry" type="text" th:field="*{sendCountry}" class="form-control"
-                                           name="sendCountry">
-                                </div>
-                                <!--this.sendState = sendState;-->
-                                <!--this.deliveryDate = deliveryDate;-->
-                                <!--this.bookingDate = bookingDate;-->
-
-
-
-                                <!--this.branch = branch;-->
-                                <!--this.company = company;-->
-                                <!--this.shippingDetails = shippingDetails;-->
-
-                                <div class="form-group col-12">
-                                    <label for="sendState">sendState</label>
-                                    <input id="sendState" type="text" th:field="*{sendState}" class="form-control"
-                                           name="sendState">
-                                </div>
-
-                                <!--<div class="form-group col-12">-->
-                                <!--<label for="birthDate">BirthDate</label>-->
-                                <!--<input id="birthDate" type="date" th:field="*{birthDate}" class="form-control"-->
-                                <!--name="birthDate">-->
-                                <!--</div>-->
 
                                 <div class="form-group col-12">
                                     <label for="deliveryDate">deliveryDate</label>
@@ -190,18 +149,7 @@
                                            name="deliveryDate">
                                 </div>
 
-
-
-                                <!--<div class="form-group col-12">-->
-                                <!--<label for="bookingDate">bookingDate</label>-->
-                                <!--<input id="bookingDate" type="date" th:field="*{bookingDate}" class="form-control"-->
-                                <!--name="bookingDate">-->
-                                <!--</div>-->
-
                             </div>
-
-
-
 
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-block">

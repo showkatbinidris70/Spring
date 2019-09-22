@@ -68,7 +68,7 @@
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-12 d-flex no-block align-items-center">
-                <h4 class="page-title">Document List</h4>
+                <h4 class="page-title">Parcel List</h4>
                 <div class="ml-auto text-right">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -94,56 +94,37 @@
         <div class="container">
             <div class="row">
                 <div class="col-10">
-                    <h2>Document List</h2>
+                    <h2>Parcel List</h2>
                 </div>
                 <div class="col-2">
-                    <a class="btn" th:href="@{/parcellist}">Document List</a>
+                    <a class="btn" th:href="@{/parcellist}">Parcel List</a>
                 </div>
             </div>
 
             <div class="table-responsive">
                 <table id="customers" class="table table-bordered table-striped table-hover dataTable js-exportable">
 
-                    <!--this.parcelName = parcelName;-->
-                    <!--this.weight = weight;-->
-                    <!--this.height = height;-->
-                    <!--this.length = length;-->
-                    <!---->
-                    <!--this.sendFrom = sendFrom;-->
-                    <!--this.receivedTo = receivedTo;-->
-                    <!--this.cost = cost;-->
-                    <!---->
-                    <!--this.productType = productType;-->
-                    <!--this.sendCountry = sendCountry;-->
-                    <!--this.sendState = sendState;-->
-                    <!---->
-                    <!--this.deliveryDate = deliveryDate;-->
-                    <!--this.bookingDate = bookingDate;-->
-                    <!---->
-                    <!--this.branch = branch;-->
-                    <!--this.company = company;-->
-                    <!--this.shippingDetails = shippingDetails;-->
-
                     <tr>
                         <th>ID</th>
-                        <th>parcelName</th>
-                        <th>weight</th>
-                        <th>height</th>
-                        <th>length</th>
+                        <th>Parcel Name</th>
+                        <th>Weight</th>
+                        <th>Height</th>
+                        <th>Length</th>
 
-                        <th>sendFrom</th>
-                        <th>receivedTo</th>
-                        <th>cost</th>
+                        <th>Send From</th>
+                        <th>Received To</th>
+                        <th>Cost</th>
 
-                        <th>productType</th>
-                        <th>sendCountry</th>
-                        <th>sendState</th>
-
-                        <th>deliveryDate</th>
-                        <th>bookingDate</th>
+                        <th>Product Type</th>
 
 
-                        <th colspan="2">Action</th>
+                        <th>Delivery Date</th>
+                        <th>Booking Date</th>
+
+                        <th>Branch Name</th>
+                        <th>Company Name</th>
+                        <th>Reciever Name</th>
+
                     </tr>
 
                     <tr th:each="parcel : ${list}">
@@ -158,8 +139,7 @@
                         <td th:text="${parcel.cost}"></td>
 
                         <td th:text="${parcel.productType}"></td>
-                        <td th:text="${parcel.sendCountry}"></td>
-                        <td th:text="${parcel.sendState}"></td>
+
 
                         <td th:text="${parcel.deliveryDate}"></td>
                         <td th:text="${parcel.bookingDate}"></td>
@@ -168,26 +148,16 @@
                         <td th:text="${parcel.company.companyName}"></td>
                         <td th:text="${parcel.shippingDetails.recieverName}"></td>
 
-
-
-                        <td><a th:href="@{'/parcel/edit/'+${parcel.id}}">Edit</a></td>
-                        <td><a th:href="@{'/parcel/del/'+${parcel.id}}">Delete</a></td>
-
                     </tr>
+
                 </table>
+
 
             </div>
         </div>
-        <div class="container">
-            <a class="btn btn-primary pull-right" th:href="@{/customer/list}" type="submit">back</a>
-            <a class="btn btn-primary pull-right" th:href="@{/packing/list}" type="submit">Next</a>
-        </div>
 
     </div>
-    <!-- ============================================================== -->
-    <!-- End Container fluid  -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
+
 </div>
 
 </body>

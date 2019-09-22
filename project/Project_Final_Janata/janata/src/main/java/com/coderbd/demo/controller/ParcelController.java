@@ -35,6 +35,7 @@ public class ParcelController {
         return "parcel/add";
     }
 
+
     @PostMapping(value = "add")
     public String addParcel(@Valid Parcel parcel, BindingResult result, Model model) {
         if (result.hasErrors()) {
@@ -61,36 +62,57 @@ public class ParcelController {
         return "parcel/list";
     }
 
-    @GetMapping(value = "/documentlist")
-    public String documentlList(Model model) {
-        model.addAttribute("list", this.parcelRepo.findAllByProductType("document"));
-        return "parcel/documentlist";
-    }
 
-    @GetMapping(value = "/percellist")
+    @GetMapping(value = "/parcellist")
     public String parcelList(Model model) {
         model.addAttribute("list", this.parcelRepo.findAllByProductType("parcel"));
         return "parcel/parcellist";
     }
 
-
-    @GetMapping(value = "/bdpercellist")
-    public String bdparcelList(Model model) {
-        model.addAttribute("list", this.parcelRepo.findAllByProductTypeAndSendCountry("parcel","Bangladesh"));
-        return "parcel/bdparcellist";
-    }
-
-    @GetMapping(value = "/dubaipercellist")
-    public String dubaiparcelList(Model model) {
-        model.addAttribute("list", this.parcelRepo.findAllByProductTypeAndReceivedTo("parcel","Dubi"));
-        return "parcel/dubaiparcellist";
-    }
-
-    @GetMapping(value = "/deliverydatelist")
-    public String deliveryDateList(Model model) {
-        model.addAttribute("list", this.parcelRepo.findAllByProductType("2019-09-04"));
+    @GetMapping(value = "/documentlist")
+    public String documentlist(Model model) {
+        model.addAttribute("list", this.parcelRepo.findAllByProductType("document"));
         return "parcel/documentlist";
     }
+
+    @GetMapping(value = "/cashlist")
+    public String cashlist(Model model) {
+        model.addAttribute("list", this.parcelRepo.findAllByDeliveryType("cash"));
+        return "parcel/cashlist";
+    }
+
+    @GetMapping(value = "/craditlist")
+    public String craditlist(Model model) {
+        model.addAttribute("list", this.parcelRepo.findAllByDeliveryType("cradit"));
+        return "parcel/craditlist";
+    }
+
+    @GetMapping(value = "/proreceive")
+    public String proreceive(Model model) {
+        model.addAttribute("list", this.parcelRepo.findAllByReceivedToAndProductType("China", "parcel"));
+        return "parcel/proreceive";
+    }
+
+
+//
+//
+//    @GetMapping(value = "/bdpercellist")
+//    public String bdparcelList(Model model) {
+//        model.addAttribute("list", this.parcelRepo.findAllByProductTypeAndSendCountry("parcel","Bangladesh"));
+//        return "parcel/bdparcellist";
+//    }
+//
+//    @GetMapping(value = "/dubaipercellist")
+//    public String dubaiparcelList(Model model) {
+//        model.addAttribute("list", this.parcelRepo.findAllByProductTypeAndReceivedTo("parcel","Dubi"));
+//        return "parcel/dubaiparcellist";
+//    }
+//
+//    @GetMapping(value = "/deliverydatelist")
+//    public String deliveryDateList(Model model) {
+//        model.addAttribute("list", this.parcelRepo.findAllByProductType("2019-09-04"));
+//        return "parcel/documentlist";
+//    }
 
     @GetMapping(value = "/edit/{id}")
     public String editParcelView(@PathVariable("id") Long id, Model model) {

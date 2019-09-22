@@ -24,7 +24,7 @@
     <div class="page-breadcrumb">
         <div class="row">
             <div class="col-12 d-flex no-block align-items-center">
-                <h1  style="color: #bb0000"  class="page-title">Janata Internationanl Express</h1>
+                <h1 style="color: #bb0000" class="page-title">Janata Internationanl Express</h1>
                 <div class="ml-auto text-right">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
@@ -59,19 +59,19 @@
                         <h6 class="text-white">Dashboard</h6>
                     </div>
                 </div>
-                    <!--</a>-->
+                <!--</a>-->
             </div>
 
 
             <!-- Column -->
             <div class="col-md-6 col-lg-3 col-xlg-3">
                 <a th:href="@{/role/list}">
-                <div class="card card-hover">
-                    <div class="box bg-success text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
-                        <h6 class="text-white">Roles</h6>
+                    <div class="card card-hover">
+                        <div class="box bg-success text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-chart-areaspline"></i></h1>
+                            <h6 class="text-white">Roles</h6>
+                        </div>
                     </div>
-                </div>
                 </a>
             </div>
 
@@ -79,25 +79,36 @@
             <!-- Column -->
             <div class="col-md-6 col-lg-3 col-xlg-3">
                 <a th:href="@{/user/list}">
-                <div class="card card-hover">
-                    <div class="box bg-warning text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
-                        <h6 class="text-white">Users</h6>
+                    <div class="card card-hover">
+                        <div class="box bg-warning text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-collage"></i></h1>
+                            <h6 class="text-white">Users</h6>
+                        </div>
                     </div>
-                </div>
                 </a>
             </div>
 
 
+            <div class="col-md-6 col-lg-3 col-xlg-3">
+                <a th:href="@{/report/totalUser}">
+                    <div class="card card-hover">
+                        <div class="box bg-warning text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-debug-step-into"></i></h1>
+                            <h6 class="text-white">Total User</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
             <!-- Column -->
             <div class="col-md-6 col-lg-3 col-xlg-3">
                 <a th:href="@{/company/list}">
-                <div class="card card-hover">
-                    <div class="box bg-danger text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
-                        <h6 class="text-white">Company</h6>
+                    <div class="card card-hover">
+                        <div class="box bg-danger text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-border-outside"></i></h1>
+                            <h6 class="text-white">Company</h6>
+                        </div>
                     </div>
-                </div>
                 </a>
             </div>
 
@@ -105,12 +116,23 @@
             <!-- Column -->
             <div class="col-md-6 col-lg-3 col-xlg-3">
                 <a th:href="@{/branch/list}">
-                <div class="card card-hover">
-                    <div class="box bg-info text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-arrow-all"></i></h1>
-                        <h6 class="text-white">Branch</h6>
+                    <div class="card card-hover">
+                        <div class="box bg-info text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-arrow-all"></i></h1>
+                            <h6 class="text-white">Branch</h6>
+                        </div>
                     </div>
-                </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 col-lg-3 col-xlg-3">
+                <a th:href="@{/report/totalBranch}">
+                    <div class="card card-hover">
+                        <div class="box bg-info text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-debug-step-into"></i></h1>
+                            <h6 class="text-white">Total Branch</h6>
+                        </div>
+                    </div>
                 </a>
             </div>
             <!-- Column -->
@@ -119,12 +141,23 @@
             <!-- Column -->
             <div class="col-md-6 col-lg-3 col-xlg-3">
                 <a th:href="@{/employee/list}">
-                <div class="card card-hover">
-                    <div class="box bg-danger text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
-                        <h6 class="text-white">Employee</h6>
+                    <div class="card card-hover">
+                        <div class="box bg-danger text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
+                            <h6 class="text-white">Employee</h6>
+                        </div>
                     </div>
-                </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 col-lg-3 col-xlg-3">
+                <a th:href="@{/report/totalEmployee}">
+                    <div class="card card-hover">
+                        <div class="box bg-danger text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-debug-step-into"></i></h1>
+                            <h6 class="text-white">Total Employee</h6>
+                        </div>
+                    </div>
                 </a>
             </div>
 
@@ -132,119 +165,216 @@
             <!-- Column -->
             <div class="col-md-6 col-lg-3 col-xlg-3">
                 <a th:href="@{/customer/list}">
-                <div class="card card-hover">
-                    <div class="box bg-info text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-relative-scale"></i></h1>
-                        <h6 class="text-white">Customer</h6>
+                    <div class="card card-hover">
+                        <div class="box bg-warning text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-relative-scale"></i></h1>
+                            <h6 class="text-white">Customer</h6>
+                        </div>
                     </div>
-                </div>
                 </a>
             </div>
 
+            <div class="col-md-6 col-lg-3 col-xlg-3">
+                <a th:href="@{/report/totalCustomer}">
+                    <div class="card card-hover">
+                        <div class="box bg-warning text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-debug-step-into"></i></h1>
+                            <h6 class="text-white">Total Customer</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
 
             <!-- Column -->
             <div class="col-md-6 col-lg-3 col-xlg-3">
                 <a th:href="@{/parcel/list}">
-                <div class="card card-hover">
-                    <div class="box bg-danger text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-file-document"></i></h1>
-                        <h6 class="text-white">Parcel</h6>
+                    <div class="card card-hover">
+                        <div class="box bg-danger text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-file-document"></i></h1>
+                            <h6 class="text-white">Parcel</h6>
+                        </div>
                     </div>
-                </div>
                 </a>
             </div>
+
+            <!-- Column -->
+            <div class="col-md-6 col-lg-3 col-xlg-3">
+                <a th:href="@{/parcel/parcellist}">
+                    <div class="card card-hover">
+                        <div class="box bg-danger text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-file-document"></i></h1>
+                            <h6 class="text-white">Parcel List</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Column -->
+            <div class="col-md-6 col-lg-3 col-xlg-3">
+                <a th:href="@{/parcel/documentlist}">
+                    <div class="card card-hover">
+                        <div class="box bg-danger text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-file-document"></i></h1>
+                            <h6 class="text-white">Document List</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Column -->
+            <div class="col-md-6 col-lg-3 col-xlg-3">
+                <a th:href="@{/parcel/cashlist}">
+                    <div class="card card-hover">
+                        <div class="box bg-danger text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-file-document"></i></h1>
+                            <h6 class="text-white">Cash List</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Column -->
+            <div class="col-md-6 col-lg-3 col-xlg-3">
+                <a th:href="@{/parcel/craditlist}">
+                    <div class="card card-hover">
+                        <div class="box bg-danger text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-file-document"></i></h1>
+                            <h6 class="text-white">Cradit List</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
             <!-- Column -->
             <div class="col-md-6 col-lg-3 col-xlg-3">
                 <a th:href="@{/packing/list}">
-                <div class="card card-hover">
-                    <div class="box bg-primary text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-parking"></i></h1>
-                        <h6 class="text-white">Packing</h6>
+                    <div class="card card-hover">
+                        <div class="box bg-primary text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-parking"></i></h1>
+                            <h6 class="text-white">Packing</h6>
+                        </div>
                     </div>
-                </div>
                 </a>
             </div>
             <!-- Column -->
             <div class="col-md-6 col-lg-3 col-xlg-3">
                 <a th:href="@{/shippingDetails/list}">
-                <div class="card card-hover">
-                    <div class="box bg-purple text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-plane-shield"></i></h1>
-                        <h6 class="text-white">Shipping Details</h6>
+                    <div class="card card-hover">
+                        <div class="box bg-danger text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-plane-shield"></i></h1>
+                            <h6 class="text-white">Shipping Details</h6>
+                        </div>
                     </div>
-                </div>
                 </a>
             </div>
+
+            <div class="col-md-6 col-lg-3 col-xlg-3">
+                <a th:href="@{/report/totalShipping}">
+                    <div class="card card-hover">
+                        <div class="box bg-danger text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-debug-step-into"></i></h1>
+                            <h6 class="text-white">Total Shipment</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+
             <!-- Column -->
             <div class="col-md-6 col-lg-3 col-xlg-3">
                 <a th:href="@{/airways/list}">
-                <div class="card card-hover">
-                    <div class="box bg-dark text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-airplane-landing"></i></h1>
-                        <h6 class="text-white">Airways</h6>
+                    <div class="card card-hover">
+                        <div class="box bg-dark text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-airplane-landing"></i></h1>
+                            <h6 class="text-white">Airways</h6>
+                        </div>
                     </div>
-                </div>
                 </a>
             </div>
             <!-- Column -->
             <div class="col-md-6 col-lg-3 col-xlg-3">
                 <a th:href="@{/sendingDetails/list}">
-                <div class="card card-hover">
-                    <div class="box bg-megna text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-send"></i></h1>
-                        <h6 class="text-white">Sender Details</h6>
+                    <div class="card card-hover">
+                        <div class="box bg-megna text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-send"></i></h1>
+                            <h6 class="text-white">Sender Details</h6>
+                        </div>
                     </div>
-                </div>
                 </a>
             </div>
+
+
+            <div class="col-md-6 col-lg-3 col-xlg-3">
+                <a th:href="@{/report/totalSender}">
+                    <div class="card card-hover">
+                        <div class="box bg-megna text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-debug-step-into"></i></h1>
+                            <h6 class="text-white">Total Sender</h6>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
             <!-- Column -->
             <div class="col-md-6 col-lg-3 col-xlg-3">
                 <a th:href="@{/receivingDetails/list}">
-                <div class="card card-hover">
-                    <div class="box bg-megna text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
-                        <h6 class="text-white">Receiver Details</h6>
+                    <div class="card card-hover">
+                        <div class="box bg-danger text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-receipt"></i></h1>
+                            <h6 class="text-white">Receiver Details</h6>
+                        </div>
                     </div>
-                </div>
-                </a>
-            </div>
-            <!-- Column -->
-            <div class="col-md-6 col-lg-3 col-xlg-3">
-                <a th:href="@{/distributionDetails/list}">
-                <div class="card card-hover">
-                    <div class="box bg-danger text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-debug-step-into"></i></h1>
-                        <h6 class="text-white">Distribution Details</h6>
-                    </div>
-                </div>
                 </a>
             </div>
 
-
-            <!-- Column -->
             <div class="col-md-6 col-lg-3 col-xlg-3">
-                <!--<a th:href="@{/role/list}">-->
-                <div class="card card-hover">
-                    <div class="box bg-success text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-calendar-check"></i></h1>
-                        <h6 class="text-white">Calnedar</h6>
+                <a th:href="@{/report/totalReceiver}">
+                    <div class="card card-hover">
+                        <div class="box bg-danger text-center">
+                            <h1 class="font-light text-white"><i class="mdi mdi-debug-step-into"></i></h1>
+                            <h6 class="text-white">Total Receiver</h6>
+                        </div>
                     </div>
-                </div>
-                <!--</a>-->
+                </a>
             </div>
 
 
-            <!-- Column -->
-            <div class="col-md-6 col-lg-3 col-xlg-3">
-                <!--<a th:href="@{/role/list}">-->
-                <div class="card card-hover">
-                    <div class="box bg-warning text-center">
-                        <h1 class="font-light text-white"><i class="mdi mdi-alert"></i></h1>
-                        <h6 class="text-white">Errors</h6>
-                    </div>
-                </div>
+            <!--&lt;!&ndash; Column &ndash;&gt;-->
+            <!--<div class="col-md-6 col-lg-3 col-xlg-3">-->
+                <!--<a th:href="@{/distributionDetails/list}">-->
+                    <!--<div class="card card-hover">-->
+                        <!--<div class="box bg-danger text-center">-->
+                            <!--<h1 class="font-light text-white"><i class="mdi mdi-debug-step-into"></i></h1>-->
+                            <!--<h6 class="text-white">Distribution Details</h6>-->
+                        <!--</div>-->
+                    <!--</div>-->
                 <!--</a>-->
-            </div>
+            <!--</div>-->
+            <!---->
+            <!--&lt;!&ndash; Column &ndash;&gt;-->
+            <!--<div class="col-md-6 col-lg-3 col-xlg-3">-->
+                <!--&lt;!&ndash;<a th:href="@{/role/list}">&ndash;&gt;-->
+                <!--<div class="card card-hover">-->
+                    <!--<div class="box bg-success text-center">-->
+                        <!--<h1 class="font-light text-white"><i class="mdi mdi-calendar-check"></i></h1>-->
+                        <!--<h6 class="text-white">Calnedar</h6>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash;</a>&ndash;&gt;-->
+            <!--</div>-->
+
+
+            <!--&lt;!&ndash; Column &ndash;&gt;-->
+            <!--<div class="col-md-6 col-lg-3 col-xlg-3">-->
+                <!--&lt;!&ndash;<a th:href="@{/role/list}">&ndash;&gt;-->
+                <!--<div class="card card-hover">-->
+                    <!--<div class="box bg-warning text-center">-->
+                        <!--<h1 class="font-light text-white"><i class="mdi mdi-alert"></i></h1>-->
+                        <!--<h6 class="text-white">Errors</h6>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--&lt;!&ndash;</a>&ndash;&gt;-->
+            <!--</div>-->
             <!-- Column -->
         </div>
         <!-- ============================================================== -->

@@ -13,9 +13,12 @@ public interface ParcelRepo extends JpaRepository<Parcel, Long> {
 
 
     Iterable<Parcel> findAllByProductType(String productType);
+    Iterable<Parcel> findAllByDeliveryType(String deliveryType);
 
-    Iterable<Parcel> findAllByProductTypeAndSendCountry(String productType, String sendCountry);
-    Iterable<Parcel> findAllByProductTypeAndReceivedTo(String productType, String receivedTo);
-    Iterable<Parcel> findAllByDeliveryDate(Date deliveryDate);
+    Iterable<Parcel>findAllByReceivedToAndProductType(String productType,String receivedTo);
+
+//    Iterable<Parcel> findAllByProductTypeAndSendCountry(String productType, String sendCountry);
+//    Iterable<Parcel> findAllByProductTypeAndReceivedTo(String productType, String receivedTo);
+//    Iterable<Parcel> findAllByDeliveryDate(Date deliveryDate);
 
 }

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Janata International Express</title>
+
+    <![endif]-->
+
+    <!--
+    <style type="text/css">
+        table {
+            width: 80%;
+            margin: 0 auto;
+        }
+    </style>
+
+-->
+
+    <style>
+        .mm {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #b4e7dd;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #0c3523;
+            color: white;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div layout:fragment="custom-content">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h2 class="page-title">Janata International Express</h2>
+                <div class="ml-auto text-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Library</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <h2>DistributionDetails List</h2>
+                </div>
+                <div class="col-2">
+                    <a class="btn" th:href="@{/list}">DistributionDetails List</a>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table id="customers" class="table table-bordered table-striped table-hover dataTable js-exportable">
+
+                <!--this.parcelName = parcelName;-->
+                <!--this.customerDetails = customerDetails;-->
+
+                <!--this.weight = weight;-->
+                <!--this.height = height;-->
+                <!--this.lenght = lenght;-->
+
+                <!--this.deliveryType = deliveryType;-->
+                <!--this.bookingDate = bookingDate;-->
+                <!--this.deliveryDate = deliveryDate;-->
+
+                <tr>
+                    <th>ID</th>
+                    <th>parcelName</th>
+                    <th>customerDetails</th>
+
+                    <th>weight</th>
+                    <th>height</th>
+                    <th>lenght</th>
+
+                    <th>deliveryType</th>
+                    <th>bookingDate</th>
+                    <th>deliveryDate</th>
+
+                    <th colspan="2">Action</th>
+                </tr>
+
+
+                <tr th:each="distributionDetails : ${list}">
+                    <td th:text="${distributionDetails.id}"></td>
+                    <td th:text="${distributionDetails.parcelName}"></td>
+                    <td th:text="${distributionDetails.customerDetails}"></td>
+
+                    <td th:text="${distributionDetails.weight}"></td>
+                    <td th:text="${distributionDetails.height}"></td>
+                    <td th:text="${distributionDetails.lenght}"></td>
+
+                    <td th:text="${distributionDetails.deliveryType}"></td>
+                    <td th:text="${distributionDetails.bookingDate}"></td>
+                    <td th:text="${distributionDetails.deliveryDate}"></td>
+
+
+                    <td><a th:href="@{'/distributionDetails/edit/'+${distributionDetails.id}}">Edit</a></td>
+                    <td><a th:href="@{'/distributionDetails/del/'+${distributionDetails.id}}">Delete</a></td>
+
+                </tr>
+            </table>
+            </div>
+
+        </div>
+
+
+        <div class="container">
+            <a class="btn btn-primary pull-right" th:href="@{/receivingDetails/list}" type="submit">back</a>
+
+
+        </div>
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+</div>
+
+</body>
+
+</html>

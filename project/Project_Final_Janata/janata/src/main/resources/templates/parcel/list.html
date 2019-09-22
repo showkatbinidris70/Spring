@@ -104,43 +104,25 @@
             <div class="table-responsive">
                 <table id="customers" class="table table-bordered table-striped table-hover dataTable js-exportable">
 
-                <!--this.parcelName = parcelName;-->
-                <!--this.weight = weight;-->
-                <!--this.height = height;-->
-                <!--this.length = length;-->
-                <!---->
-                <!--this.sendFrom = sendFrom;-->
-                <!--this.receivedTo = receivedTo;-->
-                <!--this.cost = cost;-->
-                <!---->
-                <!--this.productType = productType;-->
-                <!--this.sendCountry = sendCountry;-->
-                <!--this.sendState = sendState;-->
-                <!---->
-                <!--this.deliveryDate = deliveryDate;-->
-                <!--this.bookingDate = bookingDate;-->
-                <!---->
-                <!--this.branch = branch;-->
-                <!--this.company = company;-->
-                <!--this.shippingDetails = shippingDetails;-->
-
                 <tr>
                     <th>ID</th>
-                    <th>parcelName</th>
-                    <th>weight</th>
-                    <th>height</th>
-                    <th>length</th>
+                    <th>Parcel Name</th>
+                    <th>Weight</th>
+                    <th>Height</th>
+                    <th>Length</th>
 
-                    <th>sendFrom</th>
-                    <th>receivedTo</th>
-                    <th>cost</th>
+                    <th>Send From</th>
+                    <th>Received To</th>
+                    <th>Product Type</th>
+                    <th>Delivery Type</th>
 
-                    <th>productType</th>
-                    <th>sendCountry</th>
-                    <th>sendState</th>
+                    <th>Cost</th>
+                    <th>Delivery Date</th>
+                    <th>Booking Date</th>
 
-                    <th>deliveryDate</th>
-                    <th>bookingDate</th>
+                    <th>Branch Name</th>
+                    <th>Company Name</th>
+                    <th>Reciever Name</th>
 
 
                     <th colspan="2">Action</th>
@@ -155,12 +137,10 @@
 
                     <td th:text="${parcel.sendFrom}"></td>
                     <td th:text="${parcel.receivedTo}"></td>
-                    <td th:text="${parcel.cost}"></td>
-
                     <td th:text="${parcel.productType}"></td>
-                    <td th:text="${parcel.sendCountry}"></td>
-                    <td th:text="${parcel.sendState}"></td>
+                    <td th:text="${parcel.deliveryType}"></td>
 
+                    <td th:text="${parcel.cost}"></td>
                     <td th:text="${parcel.deliveryDate}"></td>
                     <td th:text="${parcel.bookingDate}"></td>
 

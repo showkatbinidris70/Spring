@@ -30,13 +30,12 @@ public class Parcel {
 
     private String receivedTo;
 
-    private String cost;
-
     private String productType;
 
-    private String sendCountry;
+    private String deliveryType;
 
-    private String sendState;
+    private String cost;
+
 
     @Temporal(TemporalType.DATE)
     @DateTimeFormat(pattern = "yyyy-MM-dd")
@@ -61,17 +60,16 @@ public class Parcel {
     public Parcel() {
     }
 
-    public Parcel(@NotNull @Size(min = 2, max = 30, message = "Hey, Size must be between 2 and 30") String parcelName, String weight, String height, String length, String sendFrom, String receivedTo, String cost, String productType, String sendCountry, String sendState, Date deliveryDate, Date bookingDate, Branch branch, Company company, ShippingDetails shippingDetails) {
+    public Parcel(String parcelName, String weight, String height, String length, String sendFrom, String receivedTo, String productType, String deliveryType, String cost, Date deliveryDate, Date bookingDate, Branch branch, Company company, ShippingDetails shippingDetails) {
         this.parcelName = parcelName;
         this.weight = weight;
         this.height = height;
         this.length = length;
         this.sendFrom = sendFrom;
         this.receivedTo = receivedTo;
-        this.cost = cost;
         this.productType = productType;
-        this.sendCountry = sendCountry;
-        this.sendState = sendState;
+        this.deliveryType = deliveryType;
+        this.cost = cost;
         this.deliveryDate = deliveryDate;
         this.bookingDate = bookingDate;
         this.branch = branch;
@@ -135,14 +133,6 @@ public class Parcel {
         this.receivedTo = receivedTo;
     }
 
-    public String getCost() {
-        return cost;
-    }
-
-    public void setCost(String cost) {
-        this.cost = cost;
-    }
-
     public String getProductType() {
         return productType;
     }
@@ -151,20 +141,20 @@ public class Parcel {
         this.productType = productType;
     }
 
-    public String getSendCountry() {
-        return sendCountry;
+    public String getDeliveryType() {
+        return deliveryType;
     }
 
-    public void setSendCountry(String sendCountry) {
-        this.sendCountry = sendCountry;
+    public void setDeliveryType(String deliveryType) {
+        this.deliveryType = deliveryType;
     }
 
-    public String getSendState() {
-        return sendState;
+    public String getCost() {
+        return cost;
     }
 
-    public void setSendState(String sendState) {
-        this.sendState = sendState;
+    public void setCost(String cost) {
+        this.cost = cost;
     }
 
     public Date getDeliveryDate() {
@@ -208,6 +198,33 @@ public class Parcel {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Parcel parcel = (Parcel) o;
+        return Objects.equals(getId(), parcel.getId()) &&
+                Objects.equals(getParcelName(), parcel.getParcelName()) &&
+                Objects.equals(getWeight(), parcel.getWeight()) &&
+                Objects.equals(getHeight(), parcel.getHeight()) &&
+                Objects.equals(getLength(), parcel.getLength()) &&
+                Objects.equals(getSendFrom(), parcel.getSendFrom()) &&
+                Objects.equals(getReceivedTo(), parcel.getReceivedTo()) &&
+                Objects.equals(getProductType(), parcel.getProductType()) &&
+                Objects.equals(getDeliveryType(), parcel.getDeliveryType()) &&
+                Objects.equals(getCost(), parcel.getCost()) &&
+                Objects.equals(getDeliveryDate(), parcel.getDeliveryDate()) &&
+                Objects.equals(getBookingDate(), parcel.getBookingDate()) &&
+                Objects.equals(getBranch(), parcel.getBranch()) &&
+                Objects.equals(getCompany(), parcel.getCompany()) &&
+                Objects.equals(getShippingDetails(), parcel.getShippingDetails());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getId(), getParcelName(), getWeight(), getHeight(), getLength(), getSendFrom(), getReceivedTo(), getProductType(), getDeliveryType(), getCost(), getDeliveryDate(), getBookingDate(), getBranch(), getCompany(), getShippingDetails());
+    }
+
+    @Override
     public String toString() {
         return "Parcel{" +
                 "id=" + id +
@@ -217,10 +234,9 @@ public class Parcel {
                 ", length='" + length + '\'' +
                 ", sendFrom='" + sendFrom + '\'' +
                 ", receivedTo='" + receivedTo + '\'' +
-                ", cost='" + cost + '\'' +
                 ", productType='" + productType + '\'' +
-                ", sendCountry='" + sendCountry + '\'' +
-                ", sendState='" + sendState + '\'' +
+                ", deliveryType='" + deliveryType + '\'' +
+                ", cost='" + cost + '\'' +
                 ", deliveryDate=" + deliveryDate +
                 ", bookingDate=" + bookingDate +
                 ", branch=" + branch +

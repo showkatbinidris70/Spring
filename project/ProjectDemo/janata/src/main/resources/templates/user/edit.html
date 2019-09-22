@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Janata International Express</title>
+
+    <![endif]-->
+
+    <style type="text/css">
+        .err {
+            color: red;
+        }
+
+        .succes {
+            color: green;
+        }
+    </style>
+
+
+</head>
+
+<body>
+<div layout:fragment="custom-content">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h2 class="page-title">Janata International Express</h2>
+                <div class="ml-auto text-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Library</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+
+
+
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid" >
+
+
+        <span th:class="succes" th:text="${successMsg}"></span>
+
+        <div class="col-lg-8 col-md-12 col-12 col-sm-12">
+            <div class="login-brand">
+                A new Perspective of Business Delivery
+            </div>
+
+            <div>
+                <div class="card card-primary">
+                    <div class="card-header"><h5>Edit User</h5></div>
+                    <div class="card-body">
+                        <form th:object="${user}" action="#" th:action="@{/user/edit/} + ${id}" th:method="POST">
+                            <input type="hidden" th:value="*{id}" th:action="${user.id}"/>
+                            <!--<div class="row">-->
+                                <!--<div class="form-group col-12">-->
+                                    <!--<label for="role_name">Role Name</label>-->
+                                    <!--<input id="role_name" type="text" class="form-control" th:field="*{roleName}"-->
+                                           <!--placeholder="Enter Role Name"/>-->
+
+                                <!--</div>-->
+                            <!--</div>-->
+
+
+                            <div class="row">
+
+
+                                <!--this.username = username;-->
+                                <!--this.firstName = firstName;-->
+                                <!--this.lastName = lastName;-->
+
+
+                                <div class="form-group col-12">
+                                    <label for="username">UserName</label>
+                                    <input id="username" type="text" th:field="*{username}" class="form-control"
+                                           name="username">
+                                </div>
+
+
+                                <div class="form-group col-12">
+                                    <label for="firstName">FirstName</label>
+                                    <input id="firstName" type="text" th:field="*{firstName}" class="form-control"
+                                           name="firstName">
+                                </div>
+
+
+                                <div class="form-group col-12">
+                                    <label for="lastName">LastName</label>
+                                    <input id="lastName" type="text" th:field="*{lastName}" class="form-control"
+                                           name="lastName">
+                                </div>
+
+
+                                <!--this.birthDate = birthDate;-->
+                                <!--this.age = age;-->
+                                <!--this.gender = gender;-->
+
+
+                                <div class="form-group col-12">
+                                    <label for="birthDate">BirthDate</label>
+                                    <input id="birthDate" type="date" th:field="*{birthDate}" class="form-control"
+                                           name="birthDate">
+                                </div>
+
+
+                                <div class="form-group col-12">
+                                    <label for="age">Age</label>
+                                    <input id="age" type="text" th:field="*{age}" class="form-control" name="age">
+                                </div>
+
+
+                                <div class="form-group col-12">
+                                    <label>Gender</label>
+                                    <input id="Mgender" type="radio" th:field="*{gender}" th:value="male"
+                                           class="form-control" name="gender">Male
+                                    <input id="Fgender" type="radio" th:field="*{gender}" th:value="female"
+                                           class="form-control" name="gender">Female
+                                </div>
+
+
+                                <!--this.address = address;-->
+                                <!--this.regiDate = regiDate;-->
+                                <!--this.email = email;-->
+
+
+
+                                <div class="form-group col-12">
+                                    <label for="address">Address</label>
+                                    <input id="address" type="text" th:field="*{address}" class="form-control"
+                                           name="address">
+                                </div>
+
+                                <!--<div class="form-group col-12">-->
+                                <!--<label for="regiDate">regiDate</label>-->
+                                <!--<input id="regiDate" type="text" th:field="*{regiDate}" class="form-control"-->
+                                <!--name="regiDate">-->
+                                <!--</div>-->
+
+                                <div class="form-group col-12">
+                                    <label for="email">Email</label>
+                                    <input id="email" type="text" th:field="*{email}" class="form-control" name="email">
+                                </div>
+
+
+                                <!--this.mobile = mobile;-->
+                                <!--this.lastModifiedDate = lastModifiedDate;-->
+                                <!--this.password = password;-->
+
+
+
+
+                                <div class="form-group col-12">
+                                    <label for="mobile">Mobile</label>
+                                    <input id="mobile" type="text" th:field="*{mobile}" class="form-control"
+                                           name="mobile">
+                                </div>
+
+                                <!--<div class="form-group col-12">-->
+                                <!--<label for="lastModifiedDate">lastModifiedDate</label>-->
+                                <!--<input id="lastModifiedDate" type="text" th:field="*{lastModifiedDate}" class="form-control"-->
+                                <!--name="lastModifiedDate">-->
+                                <!--</div>-->
+
+                                <div class="form-group col-12">
+                                    <label for="password">password</label>
+                                    <input id="password" type="text" th:field="*{password}" class="form-control"
+                                           name="password">
+                                </div>
+
+
+
+                                <!--this.status = status;-->
+                                <!--this.conformationToken = conformationToken;-->
+                                <!--this.roles = roles;-->
+
+                                <div class="form-group col-12">
+                                    <label for="status">status</label>
+                                    <input id="status" type="text" th:field="*{status}" class="form-control"
+                                           name="status">
+                                </div>
+                                <div class="form-group col-12">
+                                    <label for="conformationToken">conformationToken</label>
+                                    <input id="conformationToken" type="text" th:field="*{conformationToken}" class="form-control"
+                                           name="conformationToken">
+                                </div>
+                                <!--<div class="form-group col-12">-->
+                                <!--<label for="roles">roles</label>-->
+                                <!--<input id="roles" type="text" th:field="*{roles}" class="form-control"-->
+                                <!--name="roles">-->
+                                <!--</div>-->
+
+                            </div>
+
+
+                            <div class="form-group">
+                                <button class="btn btn-primary btn-block">
+                                    Update User
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <a th:href="@{/}">Home</a>
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+</div>
+
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout.html}">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Janata International Express</title>
+
+    <![endif]-->
+    <!--
+        <style type="text/css">
+            table {
+                width: 80%;
+                margin: 0 auto;
+            }
+        </style>
+    -->
+
+    <style>
+        .mm {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even) {
+            background-color: #b4e7dd;
+        }
+
+        #customers tr:hover {
+            background-color: #ddd;
+        }
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #0c3523;
+            color: white;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+<div layout:fragment="custom-content">
+    <!-- ============================================================== -->
+    <!-- Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+    <div class="page-breadcrumb">
+        <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+                <h2 class="page-title">Janata International Express</h2>
+                <div class="ml-auto text-right">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"> <a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Library</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Bread crumb and right sidebar toggle -->
+    <!-- ============================================================== -->
+
+
+    <!-- ============================================================== -->
+    <!-- Container fluid  -->
+    <!-- ============================================================== -->
+    <div class="container-fluid">
+
+
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <h4>Employee List</h4>
+                </div>
+                <div class="col-2">
+                    <a class="btn" th:href="@{/list}">Employee List</a>
+                </div>
+            </div>
+
+            <div class="table-responsive">
+                <table id="customers" class="table table-bordered table-striped table-hover dataTable js-exportable">
+
+                    <!--this.firstName = firstName;-->
+                    <!--this.lastName = lastName;-->
+                    <!--this.age = age;-->
+
+                    <!--this.joiningDate = joiningDate;-->
+                    <!--this.gender = gender;-->
+                    <!--this.birthDate = birthDate;-->
+
+                    <!--this.salary = salary;-->
+                    <!--this.bloodGroup = bloodGroup;-->
+                    <!--this.address = address;-->
+
+                    <!--this.contactNo = contactNo;-->
+                    <!--this.email = email;-->
+
+                    <!--this.branch = branch;-->
+                    <!--this.company = company;-->
+                    <!--this.user = user;-->
+                <tr>
+                    <th>ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Age</th>
+
+                    <th>Joining Date</th>
+                    <th>Gender</th>
+                    <th>Birth Date</th>
+
+                    <th>Salary</th>
+                    <th>Blood Group</th>
+                    <th>Address</th>
+
+                    <th>Contact No</th>
+                    <th>Email Address</th>
+
+                    <th>Branch Name</th>
+                    <th>Company Name</th>
+                    <th>User Name</th>
+
+                </tr>
+
+                <tr th:each="employee : ${list}">
+                    <td th:text="${employee.id}"></td>
+                    <td th:text="${employee.firstName}"></td>
+                    <td th:text="${employee.lastName}"></td>
+                    <td th:text="${employee.age}"></td>
+
+                    <td th:text="${employee.joiningDate}"></td>
+                    <td th:text="${employee.gender}"></td>
+                    <td th:text="${employee.birthDate}"></td>
+
+                    <td th:text="${employee.salary}"></td>
+                    <td th:text="${employee.bloodGroup}"></td>
+                    <td th:text="${employee.address}"></td>
+
+                    <td th:text="${employee.contactNo}"></td>
+                    <td th:text="${employee.email}"></td>
+
+                    <td th:text="${employee.branch.branchName}"></td>
+                    <td th:text="${employee.company.companyName}"></td>
+                    <td th:text="${employee.user.username}"></td>
+
+
+                    <tr style="background: lightsteelblue">
+                        <td colspan="6" style="font-size: x-large">Total Employee</td>
+                        <td colspan="6" style="font-weight: bold" th:text="${totalEmployee}"></td>
+                    </tr>
+                </tr>
+            </table>
+
+            </div>
+        </div>
+
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Container fluid  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+</div>
+
+</body>
+
+</html>

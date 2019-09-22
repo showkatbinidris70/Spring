@@ -36,7 +36,7 @@
         }
 
         #customers td, #customers th {
-            border: 1px solid #80172a;
+            border: 1px solid #ddd;
             padding: 8px;
         }
 
@@ -113,7 +113,7 @@
                     <th>ID</th>
                     <th>receiverName</th>
                     <th>receivingDate</th>
-                    <th>send_b_name</th>
+                    <!--<th>send_b_name</th>-->
 
                     <th>rece_b_name</th>
                     <th>employeeName</th>
@@ -129,7 +129,7 @@
                     <td th:text="${receivingDetails.receiverName}"></td>
                     <td th:text="${receivingDetails.receivingDate}"></td>
 
-                    <td th:text="${receivingDetails.sendingBranch.branchName}"></td>
+                    <!--<td th:text="${receivingDetails.sendingBranch.branchName}"></td>-->
                     <td th:text="${receivingDetails.receivingBranch.branchName}"></td>
                     <td th:text="${receivingDetails.employee.firstName}"></td>
                     <!--<td th:text="${receivingDetails.packings}"></td>-->

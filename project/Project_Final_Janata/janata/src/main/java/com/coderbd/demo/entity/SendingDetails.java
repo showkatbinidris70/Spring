@@ -26,9 +26,14 @@ public class SendingDetails {
     @JoinColumn(name = "sendingbranch_id")
     private Branch sendingbranch;
 
-    @ManyToOne
-    @JoinColumn(name = "destinationbranch_id")
-    private Branch destinationbranch;
+
+
+//    @ManyToOne
+//    @JoinColumn(name = "destinationbranch_id")
+//    private Branch destinationbranch;
+
+
+
 
     @ManyToOne
     @JoinColumn(name = "employee_id")
@@ -46,11 +51,10 @@ public class SendingDetails {
     public SendingDetails() {
     }
 
-    public SendingDetails(String senderName, Date sendingDate, Branch sendingbranch, Branch destinationbranch, Employee employee, Set<Packing> packings) {
+    public SendingDetails(String senderName, Date sendingDate, Branch sendingbranch, Employee employee, Set<Packing> packings) {
         this.senderName = senderName;
         this.sendingDate = sendingDate;
         this.sendingbranch = sendingbranch;
-        this.destinationbranch = destinationbranch;
         this.employee = employee;
         this.packings = packings;
     }
@@ -87,14 +91,6 @@ public class SendingDetails {
         this.sendingbranch = sendingbranch;
     }
 
-    public Branch getDestinationbranch() {
-        return destinationbranch;
-    }
-
-    public void setDestinationbranch(Branch destinationbranch) {
-        this.destinationbranch = destinationbranch;
-    }
-
     public Employee getEmployee() {
         return employee;
     }
@@ -120,14 +116,13 @@ public class SendingDetails {
                 Objects.equals(getSenderName(), that.getSenderName()) &&
                 Objects.equals(getSendingDate(), that.getSendingDate()) &&
                 Objects.equals(getSendingbranch(), that.getSendingbranch()) &&
-                Objects.equals(getDestinationbranch(), that.getDestinationbranch()) &&
                 Objects.equals(getEmployee(), that.getEmployee()) &&
                 Objects.equals(getPackings(), that.getPackings());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getSenderName(), getSendingDate(), getSendingbranch(), getDestinationbranch(), getEmployee(), getPackings());
+        return Objects.hash(getId(), getSenderName(), getSendingDate(), getSendingbranch(), getEmployee(), getPackings());
     }
 
     @Override
@@ -137,7 +132,6 @@ public class SendingDetails {
                 ", senderName='" + senderName + '\'' +
                 ", sendingDate=" + sendingDate +
                 ", sendingbranch=" + sendingbranch +
-                ", destinationbranch=" + destinationbranch +
                 ", employee=" + employee +
                 ", packings=" + packings +
                 '}';

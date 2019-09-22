@@ -44,7 +44,7 @@
                 <div class="ml-auto text-right">
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item"> <a th:href="@{/}">Home</a></li>
+                            <li class="breadcrumb-item"><a th:href="@{/}">Home</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Library</li>
                         </ol>
                     </nav>
@@ -76,7 +76,7 @@
                     <div class="card-header"><h4>Add New Branch</h4></div>
                     <div class="card-body">
 
-                        <form  th:object="${branch}" th:action="@{/branch/add}" th:method="POST">
+                        <form th:object="${branch}" th:action="@{/branch/add}" th:method="POST">
 
                             <div class="row">
 
@@ -92,19 +92,24 @@
                                     </div>
                                 </div>
 
-
-                                <!--this.branchName = branchName;-->
-                                <!--this.managerName = managerName;-->
-                                <!--this.code = code;-->
-                                <!--this.country = country;-->
-                                <!--this.contactNo = contactNo;-->
-                                <!--this.email = email;-->
-                                <!--this.company = company;-->
+                              <!---->
+                                <!--<div class="form-group col-12">-->
+                                    <!--<label for="branchName">Branch Name</label>-->
+                                    <!--<input id="branchName" type="text" th:field="*{branchName}" class="form-control"-->
+                                           <!--name="branchNames">-->
+                                <!--</div>-->
 
                                 <div class="form-group col-12">
-                                    <label for="branchName">Branch Name</label>
-                                    <input id="branchName" type="text" th:field="*{branchName}" class="form-control"
-                                           name="branchName">
+                                    <h5>Select branch name</h5>
+                                    <select class="show-tick" th:field="*{branchName}">
+                                        <option value="Select Branch Name">Select Branch name</option>
+                                        <option value="Dhaka">Dhaka</option>
+                                        <option value="Sylhet">Sylhet</option>
+                                        <option value="Chittagonj">Chittagonj</option>
+                                        <option value="Borishal">Borishal</option>
+                                        <option value="Khulna">Khulna</option>
+                                        <option value="Kishoreganj">Kishoreganj</option>
+                                    </select>
                                 </div>
 
 
@@ -116,7 +121,7 @@
 
 
                                 <div class="form-group col-12">
-                                    <label for="code">Code</label>
+                                    <label for="code">Branch Code</label>
                                     <input id="code" type="text" th:field="*{code}" class="form-control"
                                            name="code">
                                 </div>
@@ -124,10 +129,9 @@
 
                                 <div class="form-group col-12">
                                     <label for="country">Country</label>
-                                    <input id="country" type="text" th:field="*{country}" class="form-control" name="age">
+                                    <input id="country" type="text" th:field="*{country}" class="form-control"
+                                           name="age">
                                 </div>
-
-
 
                                 <div class="form-group col-12">
                                     <label for="contactNo">ContactNo</label>
@@ -137,22 +141,15 @@
 
                                 <div class="form-group col-12">
                                     <label for="email">Email</label>
-                                    <input id="email" type="text" th:field="*{email}" class="form-control" name="email">
+                                    <input id="email" type="text" th:field="*{email}" class="form-control"
+                                           name="email">
                                 </div>
-
-
-                                <!--<div class="form-group col-12">-->
-                                    <!--<label for="company">Company</label>-->
-                                    <!--<input id="company" type="text" th:field="*{company}" class="form-control"-->
-                                           <!--name="company">-->
-                                <!--</div>-->
 
                             </div>
 
-
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary btn-block">
-                                    Branch Registration
+                                   Save
                                 </button>
                             </div>
 

@@ -104,26 +104,6 @@
             <div class="table-responsive">
                 <table id="customers" class="table table-bordered table-striped table-hover dataTable js-exportable">
 
-                <!--this.parcelName = parcelName;-->
-                <!--this.weight = weight;-->
-                <!--this.height = height;-->
-                <!--this.length = length;-->
-                <!---->
-                <!--this.sendFrom = sendFrom;-->
-                <!--this.receivedTo = receivedTo;-->
-                <!--this.cost = cost;-->
-                <!---->
-                <!--this.productType = productType;-->
-                <!--this.sendCountry = sendCountry;-->
-                <!--this.sendState = sendState;-->
-                <!---->
-                <!--this.deliveryDate = deliveryDate;-->
-                <!--this.bookingDate = bookingDate;-->
-                <!---->
-                <!--this.branch = branch;-->
-                <!--this.company = company;-->
-                <!--this.shippingDetails = shippingDetails;-->
-
                 <tr>
                     <th>ID</th>
                     <th>parcelName</th>
@@ -136,8 +116,7 @@
                     <th>cost</th>
 
                     <th>productType</th>
-                    <th>sendCountry</th>
-                    <th>sendState</th>
+
 
                     <th>deliveryDate</th>
                     <th>bookingDate</th>
@@ -158,8 +137,7 @@
                     <td th:text="${parcel.cost}"></td>
 
                     <td th:text="${parcel.productType}"></td>
-                    <td th:text="${parcel.sendCountry}"></td>
-                    <td th:text="${parcel.sendState}"></td>
+
 
                     <td th:text="${parcel.deliveryDate}"></td>
                     <td th:text="${parcel.bookingDate}"></td>
